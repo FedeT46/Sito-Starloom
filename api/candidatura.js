@@ -8,21 +8,22 @@ export const config = {
   },
 };
 
-async function uploadCV(filePath) {
+async function uploadCV(filePath, originalName) {
   const fileBuffer = fs.readFileSync(filePath);
-  const fileName = path.basename(filePath);
-  const formData = new FormData();
-  const blob = new Blob([fileBuffer], { type: 'application/pdf' });
-  formData.append('file', blob, fileName);
+  const fileName = originalName || path.basename(filePath);
 
-  const response = await fetch('https://file.io/?expires=1y', {
-    method: 'POST',
-    body: formData,
+  const response = await fetch(`https://transfer.sh/${encodeURIComponent(fileName)}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/pdf',
+      'Max-Days': '365',
+    },
+    body: fileBuffer,
   });
 
-  const data = await response.json();
-  if (!data.success) throw new Error('File.io upload failed');
-  return data.link;
+  if (!response.ok) throw new Error(`transfer.sh error: ${response.status}`);
+  const url = await response.text();
+  return url.trim();
 }
 
 export default async function handler(req, res) {
@@ -64,8 +65,11 @@ export default async function handler(req, res) {
     let cvUrl = '';
     const cvFile = files.cv ? (Array.isArray(files.cv) ? files.cv[0] : files.cv) : null;
     if (cvFile && cvFile.filepath) {
-      try { cvUrl = await uploadCV(cvFile.filepath); }
-      catch (e) { console.error('CV upload error:', e); }
+      try {
+        cvUrl = await uploadCV(cvFile.filepath, cvFile.originalFilename || 'cv.pdf');
+      } catch (e) {
+        console.error('CV upload error:', e);
+      }
     }
 
     const notionBody = {
