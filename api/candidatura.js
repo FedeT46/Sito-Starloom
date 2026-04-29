@@ -111,7 +111,7 @@ export default async function handler(req, res) {
         'Consenso promozionale': { checkbox:     privacy2 },
         'Data candidatura':      { date:         { start: new Date().toISOString().split('T')[0] } },
         'Stato':                 { select:       { name: 'Nuovo' } },
-        ...(cvUrl && { 'CV': { rich_text: [{ text: { content: cvUrl } }] } }),
+        ...(cvUrl && { 'CV': { url: cvUrl } }),
       },
     };
 
