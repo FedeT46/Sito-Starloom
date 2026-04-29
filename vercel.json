@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/candidatura.js": {
+      "runtime": "nodejs20.x"
+    }
+  }
+}

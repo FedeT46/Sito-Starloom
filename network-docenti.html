@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cookie Policy — Starloom</title>
+  <title>Entra nel Network — Starloom</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -11,59 +11,115 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --black: #0a0a0a; --white: #ffffff; --gray: #888888;
-      --light-gray: #f5f5f5; --border: #e8e8e8; --accent: #b8f03a;
+      --light-gray: #f5f5f5; --border: #d8d8d8; --accent: #b8f03a;
       --font-serif: "Playfair Display", Georgia, serif;
       --font-sans: "DM Sans", sans-serif;
     }
     html { scroll-behavior: smooth; }
     body { font-family: var(--font-sans); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
 
+    /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--black); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 64px; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .nav-logo { display: flex; align-items: center; text-decoration: none; }
     .nav-logo img { height: 22px; width: auto; display: block; }
     .nav-links { display: flex; gap: 40px; list-style: none; }
     .nav-links a { font-size: 15px; font-weight: 700; color: var(--white); text-decoration: none; opacity: 0.85; transition: opacity 0.2s; }
     .nav-links a:hover { opacity: 1; }
-
     .nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; cursor: pointer; background: none; border: none; padding: 4px; z-index: 200; }
     .nav-hamburger span { display: block; height: 1.5px; background: var(--white); border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; transform-origin: center; }
     .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
     .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-    .nav-mobile-menu { display: none; position: fixed; top: 56px; left: 0; right: 0; background: var(--black); border-top: 1px solid rgba(255,255,255,0.06); padding: 24px 20px 32px; z-index: 99; flex-direction: column; gap: 0; }
+    .nav-mobile-menu { display: none; position: fixed; top: 56px; left: 0; right: 0; background: var(--black); border-top: 1px solid rgba(255,255,255,0.06); padding: 24px 20px 32px; z-index: 99; flex-direction: column; }
     .nav-mobile-menu.open { display: flex; }
     .nav-mobile-menu a { font-size: 18px; font-weight: 400; color: rgba(255,255,255,0.8); text-decoration: none; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.06); transition: color 0.2s; }
     .nav-mobile-menu a:last-child { border-bottom: none; }
     .nav-mobile-menu a:hover { color: var(--white); }
 
+    /* PAGE */
     .page { padding-top: 64px; min-height: 100vh; }
 
-    .policy-hero { background: var(--black); padding: 72px 48px 64px; text-align: center; }
-    .policy-hero h1 { font-family: var(--font-serif); font-size: clamp(36px, 5vw, 60px); font-weight: 800; color: var(--white); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px; }
-    .policy-hero .meta { font-size: 14px; color: rgba(255,255,255,0.4); font-weight: 300; }
+    /* HERO */
+    .page-hero { background: var(--black); padding: 72px 48px 64px; text-align: center; }
+    .page-hero .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 20px; }
+    .page-hero h1 { font-family: var(--font-serif); font-size: clamp(36px, 5vw, 64px); font-weight: 800; color: var(--white); line-height: 1.1; letter-spacing: -0.02em; max-width: 700px; margin: 0 auto; }
 
-    .policy-content { max-width: 780px; margin: 0 auto; padding: 72px 48px 100px; }
+    /* FORM WRAPPER */
+    .form-wrapper { max-width: 640px; margin: 0 auto; padding: 72px 48px 100px; }
 
-    .policy-intro { background: var(--light-gray); border-radius: 12px; padding: 28px 32px; margin-bottom: 56px; }
-    .policy-intro p { font-size: 15px; color: #444; line-height: 1.75; margin-bottom: 12px; }
-    .policy-intro p:last-child { margin-bottom: 0; }
-    .policy-intro strong { font-weight: 500; color: var(--black); }
-    .policy-intro a { color: var(--black); text-decoration: underline; text-underline-offset: 3px; }
+    /* SECTION LABELS */
+    .form-section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(0,0,0,0.35); margin-bottom: 20px; margin-top: 48px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+    .form-section-label:first-child { margin-top: 0; }
 
-    .policy-section { margin-bottom: 52px; padding-bottom: 52px; border-bottom: 1px solid var(--border); }
-    .policy-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-    .policy-section h2 { font-family: var(--font-sans); font-size: 20px; font-weight: 500; color: var(--black); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
-    .policy-section h2 .num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; min-width: 28px; background: var(--black); color: var(--white); border-radius: 50%; font-size: 12px; font-weight: 500; }
-    .policy-section h3 { font-family: var(--font-sans); font-size: 11px; font-weight: 500; color: var(--black); margin-top: 28px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.09em; opacity: 0.45; }
-    .policy-section p { font-size: 15px; color: #444; line-height: 1.8; margin-bottom: 14px; }
-    .policy-section p:last-child { margin-bottom: 0; }
-    .policy-section ul { list-style: none; margin: 12px 0 16px; display: flex; flex-direction: column; gap: 8px; }
-    .policy-section ul li { font-size: 15px; color: #444; line-height: 1.7; padding-left: 20px; position: relative; }
-    .policy-section ul li::before { content: ""; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--black); border-radius: 50%; opacity: 0.25; }
-    .policy-section a { color: var(--black); text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
-    .policy-section a:hover { opacity: 0.6; }
-    .base-giuridica { display: inline-block; font-size: 12px; font-weight: 500; color: #555; background: #f0f0f0; border-radius: 4px; padding: 4px 10px; margin-top: 10px; }
+    /* FIELDS */
+    .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+    .field:last-child { margin-bottom: 0; }
+    .field label { font-size: 13px; font-weight: 500; color: var(--black); }
+    .field label .req { color: #999; margin-left: 2px; }
+    .field input, .field textarea, .field select {
+      width: 100%; padding: 14px 16px; font-family: var(--font-sans); font-size: 15px;
+      color: var(--black); background: var(--white); border: 1px solid var(--border);
+      border-radius: 6px; outline: none; transition: border-color 0.2s; -webkit-appearance: none;
+    }
+    .field input::placeholder, .field textarea::placeholder { color: #b8b8b8; font-weight: 300; }
+    .field input:focus, .field textarea:focus { border-color: #888; }
 
+    /* UPLOAD FIELDS */
+    .upload-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .upload-field { display: flex; flex-direction: column; gap: 8px; }
+    .upload-field label { font-size: 13px; font-weight: 500; color: var(--black); }
+    .upload-label-sub { font-size: 11px; color: var(--gray); font-weight: 300; margin-top: 2px; }
+    .upload-box {
+      border: 1.5px dashed var(--border); border-radius: 8px; padding: 28px 16px;
+      text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s;
+      position: relative; background: var(--white);
+    }
+    .upload-box:hover { border-color: #888; background: #fafafa; }
+    .upload-box input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+    .upload-icon { font-size: 24px; margin-bottom: 8px; opacity: 0.3; }
+    .upload-box-label { font-size: 13px; color: var(--gray); line-height: 1.5; }
+    .upload-box-limit { font-size: 11px; color: #bbb; margin-top: 4px; }
+    .upload-preview { font-size: 12px; color: #444; margin-top: 6px; font-weight: 400; min-height: 18px; }
+
+    /* CHECKBOXES AREE */
+    .area-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .area-item { display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+    .area-item:hover { border-color: #aaa; background: #fafafa; }
+    .area-item.selected { border-color: var(--black); background: #f8f8f8; }
+    .area-item input[type="checkbox"] { width: 17px; height: 17px; min-width: 17px; margin-top: 1px; border: 1.5px solid var(--border); border-radius: 3px; appearance: none; -webkit-appearance: none; background: var(--white); cursor: pointer; transition: background 0.15s, border-color 0.15s; position: relative; }
+    .area-item input[type="checkbox"]:checked { background: var(--black); border-color: var(--black); }
+    .area-item input[type="checkbox"]:checked::after { content: ""; position: absolute; left: 4px; top: 1px; width: 5px; height: 9px; border: 1.5px solid var(--white); border-top: none; border-left: none; transform: rotate(45deg); }
+    .area-item-label { font-size: 13px; font-weight: 400; color: #333; line-height: 1.45; cursor: pointer; }
+
+    /* PRIVACY */
+    .privacy-group { display: flex; flex-direction: column; gap: 14px; }
+    .privacy-item { display: flex; align-items: flex-start; gap: 14px; }
+    .privacy-item input[type="checkbox"] { width: 20px; height: 20px; min-width: 20px; margin-top: 2px; border: 1px solid var(--border); border-radius: 3px; appearance: none; -webkit-appearance: none; background: var(--white); cursor: pointer; transition: background 0.15s, border-color 0.15s; position: relative; }
+    .privacy-item input[type="checkbox"]:checked { background: var(--black); border-color: var(--black); }
+    .privacy-item input[type="checkbox"]:checked::after { content: ""; position: absolute; left: 5px; top: 2px; width: 6px; height: 10px; border: 1.5px solid var(--white); border-top: none; border-left: none; transform: rotate(45deg); }
+    .privacy-item span { font-size: 13px; color: #444; line-height: 1.65; }
+    .privacy-item span a { color: var(--black); text-decoration: underline; text-underline-offset: 2px; }
+
+    /* SUBMIT */
+    .btn-submit { width: 100%; padding: 18px 24px; background: var(--black); color: var(--white); font-family: var(--font-sans); font-size: 15px; font-weight: 500; border: none; border-radius: 6px; cursor: pointer; transition: background 0.2s, transform 0.1s; margin-top: 8px; }
+    .btn-submit:hover { background: #222; }
+    .btn-submit:active { transform: scale(0.99); }
+    .btn-submit:disabled { background: #ccc; cursor: not-allowed; }
+
+    /* SUCCESS */
+    .form-success { display: none; text-align: center; padding: 56px 0; }
+    .form-success.visible { display: block; }
+    .success-circle { width: 64px; height: 64px; border-radius: 50%; background: #f0f7e6; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px; }
+    .form-success h2 { font-family: var(--font-serif); font-size: 30px; font-weight: 700; margin-bottom: 12px; }
+    .form-success p { font-size: 15px; color: var(--gray); max-width: 360px; margin: 0 auto; line-height: 1.7; }
+
+    /* ERROR */
+    .field-error { font-size: 12px; color: #c0392b; margin-top: 4px; display: none; }
+    .field.error input, .field.error textarea { border-color: #c0392b; }
+    .field.error .field-error { display: block; }
+
+    /* FOOTER */
     footer { background: var(--black); padding: 72px 48px 40px; border-top: 1px solid rgba(255,255,255,0.06); }
     .footer-inner { max-width: 1140px; margin: 0 auto; }
     .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
@@ -75,25 +131,47 @@
     .footer-links a:hover, .footer-links a.active { color: var(--white); }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 28px; font-size: 12px; color: rgba(255,255,255,0.25); }
 
+    /* MODAL */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 500; align-items: center; justify-content: center; padding: 24px; }
+    .modal-overlay.visible { display: flex; }
+    .modal-box { background: var(--white); border-radius: 16px; padding: 52px 48px; max-width: 480px; width: 100%; text-align: center; }
+    .modal-check { width: 64px; height: 64px; border-radius: 50%; background: #f0f7e6; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px; color: #3a8f3a; }
+    .modal-box h2 { font-family: var(--font-serif); font-size: 26px; font-weight: 800; color: var(--black); margin-bottom: 12px; line-height: 1.2; }
+    .modal-box p { font-size: 15px; color: var(--gray); line-height: 1.7; margin-bottom: 32px; }
+    .modal-btn { display: inline-block; padding: 14px 40px; background: var(--black); color: var(--white); font-family: var(--font-sans); font-size: 14px; font-weight: 500; border: none; border-radius: 6px; cursor: pointer; transition: background 0.2s; }
+    .modal-btn:hover { background: #222; }
+
+    /* ALTRO TEXT FIELD */
+    .altro-field { display: none; margin-top: 10px; }
+    .altro-field.visible { display: block; }
+    .altro-field input { width: 100%; padding: 12px 16px; font-family: var(--font-sans); font-size: 14px; color: var(--black); background: var(--white); border: 1px solid var(--border); border-radius: 6px; outline: none; transition: border-color 0.2s; }
+    .altro-field input:focus { border-color: #888; }
+    .altro-field input::placeholder { color: #b8b8b8; font-weight: 300; }
+
+    /* AREA / UPLOAD error */
+    .section-error { font-size: 12px; color: #c0392b; margin-top: 8px; display: none; }
+    .section-error.visible { display: block; }
     @media (max-width: 1024px) {
       nav { padding: 0 32px; } footer { padding: 64px 32px 36px; }
-      .policy-hero { padding: 64px 32px 56px; } .policy-content { padding: 56px 32px 80px; }
+      .page-hero { padding: 64px 32px 56px; } .form-wrapper { padding: 56px 32px 80px; }
     }
     @media (max-width: 900px) {
       nav { padding: 0 24px; } .nav-links { gap: 24px; }
       footer { padding: 56px 24px 32px; } .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
-      .policy-hero { padding: 56px 24px 48px; } .policy-content { padding: 48px 24px 72px; }
+      .page-hero { padding: 56px 24px 48px; } .form-wrapper { padding: 48px 24px 72px; }
     }
     @media (max-width: 600px) {
       nav { padding: 0 20px; height: 56px; } .nav-links { display: none; } .nav-hamburger { display: flex; }
-      .page { padding-top: 56px; } .policy-hero { padding: 48px 20px 40px; }
-      .policy-content { padding: 40px 20px 64px; } .policy-intro { padding: 20px; }
-      .policy-section h2 { font-size: 17px; } .policy-section p, .policy-section ul li { font-size: 14px; }
+      .page { padding-top: 56px; } .page-hero { padding: 48px 20px 40px; }
+      .form-wrapper { padding: 40px 20px 64px; }
+      .form-grid-2 { grid-template-columns: 1fr; }
+      .upload-grid { grid-template-columns: 1fr; }
+      .area-grid { grid-template-columns: 1fr; }
       footer { padding: 48px 20px 28px; } .footer-grid { grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px; }
     }
     @media (max-width: 400px) {
-      nav { padding: 0 16px; } .policy-hero { padding: 40px 16px 32px; }
-      .policy-content { padding: 32px 16px 56px; } footer { padding: 40px 16px 24px; }
+      nav { padding: 0 16px; } .page-hero { padding: 40px 16px 32px; }
+      .form-wrapper { padding: 32px 16px 56px; } footer { padding: 40px 16px 24px; }
     }
   </style>
 </head>
@@ -106,7 +184,7 @@
     <ul class="nav-links">
       <li><a href="index.html#metodo">Metodo</a></li>
       <li><a href="index.html#aree">Aree di Intervento</a></li>
-      <li><a href="/cdn-cgi/l/email-protection#10717d7d797e79636462716a797f7e7550636471627c7f7f7d3e7964">Contatti</a></li>
+      <li><a href="mailto:marco@starloom.it">Contatti</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Apri menu">
       <span></span><span></span><span></span>
@@ -116,113 +194,147 @@
   <div class="nav-mobile-menu" id="mobileMenu">
     <a href="index.html#metodo" class="mobile-link">Metodo</a>
     <a href="index.html#aree" class="mobile-link">Aree di Intervento</a>
-    <a href="/cdn-cgi/l/email-protection#345559595d5a5d474046554e5d5b5a517447405546585b5b591a5d40" class="mobile-link">Contatti</a>
+    <a href="mailto:marco@starloom.it" class="mobile-link">Contatti</a>
   </div>
 
   <div class="page">
 
-    <div class="policy-hero">
-      <h1>Cookie Policy</h1>
-      <p class="meta">Ultimo aggiornamento: 04 / 03 / 2026</p>
+    <div class="page-hero">
+      <p class="eyebrow">Starloom Srl</p>
+      <h1>Entra a far parte del nostro network</h1>
     </div>
 
-    <div class="policy-content">
+    <div class="form-wrapper">
 
-      <div class="policy-intro">
-        <p>La presente Cookie Policy descrive l&rsquo;utilizzo dei cookie da parte del sito <strong>www.starloom.it</strong>, gestito da:</p>
-        <p>
-          <strong>Starloom Srl</strong><br>
-          Via Gabriele D&rsquo;Annunzio 35 &ndash; 95128 Catania (CT)<br>
-          P.IVA / CF: 06209440871<br>
-          PEC: <a href="/cdn-cgi/l/email-protection#89fafde8fbe5e6e6e4c9f9eceaa7e0fd"><span class="__cf_email__" data-cfemail="a0d3d4c1d2cccfcfcde0d0c5c38ec9d4">[email&#160;protected]</span></a><br>
-          Email: <a href="/cdn-cgi/l/email-protection#82e3efefebecebf1f6f0e3f8ebedece7c2f1f6e3f0eeededefacebf6"><span class="__cf_email__" data-cfemail="b4d5d9d9dddaddc7c0c6d5cedddbdad1f4c7c0d5c6d8dbdbd99addc0">[email&#160;protected]</span></a>
-        </p>
-        <p>La presente informativa integra la <a href="privacy-policy.html">Privacy Policy</a> del sito.</p>
+      <div id="formContainer">
+
+        <p class="form-section-label">Dati personali</p>
+
+        <div class="form-grid-2">
+          <div class="field" id="field-nome">
+            <label>Nome <span class="req">*</span></label>
+            <input type="text" id="nome" placeholder="Mario" />
+            <span class="field-error">Campo obbligatorio</span>
+          </div>
+          <div class="field" id="field-cognome">
+            <label>Cognome <span class="req">*</span></label>
+            <input type="text" id="cognome" placeholder="Rossi" />
+            <span class="field-error">Campo obbligatorio</span>
+          </div>
+        </div>
+
+        <div class="field" id="field-email">
+          <label>Email <span class="req">*</span></label>
+          <input type="email" id="email" placeholder="mario@esempio.it" />
+          <span class="field-error">Inserisci un indirizzo email valido</span>
+        </div>
+
+        <div class="field" id="field-telefono">
+          <label>Numero di telefono <span class="req">*</span></label>
+          <input type="tel" id="telefono" placeholder="+39 333 000 0000" />
+          <span class="field-error">Campo obbligatorio</span>
+        </div>
+
+        <p class="form-section-label" style="margin-top:40px;">Documenti</p>
+
+        <div class="upload-grid">
+          <div class="upload-field">
+            <label>Foto profilo <strong style="color:#999;font-weight:400;">*</strong></label>
+            <p class="upload-label-sub">Max 100 KB &mdash; JPG, PNG</p>
+            <div class="upload-box" id="box-foto">
+              <input type="file" id="foto" accept="image/jpeg,image/png" />
+              <div class="upload-icon">&#128247;</div>
+              <p class="upload-box-label">Clicca per caricare<br>la tua foto</p>
+            </div>
+            <p class="upload-preview" id="preview-foto"></p>
+          </div>
+          <div class="upload-field">
+            <label>Curriculum Vitae <strong style="color:#999;font-weight:400;">*</strong></label>
+            <p class="upload-label-sub">Max 1 MB &mdash; PDF</p>
+            <div class="upload-box" id="box-cv">
+              <input type="file" id="cv" accept="application/pdf" />
+              <div class="upload-icon">&#128196;</div>
+              <p class="upload-box-label">Clicca per caricare<br>il tuo CV</p>
+            </div>
+            <p class="upload-preview" id="preview-cv"></p>
+          </div>
+        </div>
+        <p class="section-error" id="err-upload">Foto profilo e CV sono obbligatori.</p>
+
+        <p class="form-section-label" style="margin-top:40px;">Aree di insegnamento</p>
+        <p style="font-size:13px;color:#666;margin-bottom:18px;">Seleziona una o pi&ugrave; aree in cui operi.</p>
+
+        <div class="area-grid">
+          <label class="area-item" id="area-ai">
+            <input type="checkbox" name="aree" value="AI & Automation" />
+            <span class="area-item-label">Artificial Intelligence &amp; Automation</span>
+          </label>
+          <label class="area-item" id="area-ds">
+            <input type="checkbox" name="aree" value="Digital Strategy & Branding" />
+            <span class="area-item-label">Digital Strategy &amp; Branding</span>
+          </label>
+          <label class="area-item" id="area-gp">
+            <input type="checkbox" name="aree" value="Growth, Performance & E-Commerce" />
+            <span class="area-item-label">Growth, Performance &amp; E-Commerce</span>
+          </label>
+          <label class="area-item" id="area-cs">
+            <input type="checkbox" name="aree" value="Content, Social Media & Influencer Marketing" />
+            <span class="area-item-label">Content, Social Media &amp; Influencer Marketing</span>
+          </label>
+          <label class="area-item" id="area-da">
+            <input type="checkbox" name="aree" value="Data Strategy & Analytics" />
+            <span class="area-item-label">Data Strategy &amp; Analytics</span>
+          </label>
+          <label class="area-item" id="area-cl">
+            <input type="checkbox" name="aree" value="altro" id="cb-altro" />
+            <span class="area-item-label">Altro</span>
+          </label>
+        </div>
+        <div class="altro-field" id="altro-field">
+          <input type="text" id="altro-text" placeholder="Specifica la tua area di competenza..." />
+        </div>
+
+        <p class="section-error" id="err-aree">Seleziona almeno un'area di insegnamento.</p>
+
+        <p class="form-section-label" style="margin-top:40px;">Consensi</p>
+
+        <div class="privacy-group" style="margin-bottom:32px;">
+          <div class="privacy-item">
+            <input type="checkbox" id="privacy1" />
+            <span>Dichiaro di aver letto l&rsquo;<a href="privacy-policy.html">Informativa Privacy Docenti</a> e autorizzo il trattamento dei dati per la gestione della candidatura. <strong>*</strong></span>
+          </div>
+          <div class="privacy-item">
+            <input type="checkbox" id="privacy2" />
+            <span>Acconsento all&rsquo;utilizzo del mio profilo per attivit&agrave; promozionali e alla condivisione con partner selezionati da Starloom.</span>
+          </div>
+        </div>
+
+        <p class="section-error" id="err-privacy">È necessario accettare l'Informativa Privacy per procedere.</p>
+
+        <button class="btn-submit" id="btnInvia" onclick="handleSubmit()">Invia candidatura</button>
+
       </div>
 
-      <div class="policy-section">
-        <h2><span class="num">1</span> Cosa sono i cookie</h2>
-        <p>I cookie sono piccoli file di testo che i siti web visitati dagli utenti inviano al dispositivo utilizzato per la navigazione (computer, smartphone o tablet), dove vengono memorizzati per essere poi ritrasmessi agli stessi siti durante visite successive.</p>
-        <p>I cookie consentono al sito di:</p>
-        <ul>
-          <li>funzionare correttamente</li>
-          <li>migliorare l&rsquo;esperienza di navigazione</li>
-          <li>raccogliere informazioni statistiche sull&rsquo;utilizzo del sito</li>
-          <li>offrire contenuti e comunicazioni personalizzate</li>
-        </ul>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">2</span> Tipologie di cookie utilizzati</h2>
-        <p>Il sito pu&ograve; utilizzare le seguenti categorie di cookie.</p>
-
-        <h3>2.1 Cookie tecnici</h3>
-        <p>I cookie tecnici sono necessari per il corretto funzionamento del sito e non richiedono il consenso dell&rsquo;utente. Permettono, ad esempio:</p>
-        <ul>
-          <li>la navigazione tra le pagine del sito</li>
-          <li>la gestione delle preferenze dell&rsquo;utente</li>
-          <li>il corretto funzionamento dei moduli di contatto</li>
-        </ul>
-        <p>La disattivazione di tali cookie potrebbe compromettere il funzionamento del sito.</p>
-
-        <h3>2.2 Cookie analitici</h3>
-        <p>Il sito pu&ograve; utilizzare cookie analitici per raccogliere informazioni statistiche aggregate sull&rsquo;utilizzo del sito. Ad esempio:</p>
-        <ul>
-          <li>Google Analytics / Google Analytics 4</li>
-        </ul>
-        <p>Questi cookie consentono di analizzare: numero di visitatori, pagine visitate, durata delle visite e modalit&agrave; di utilizzo del sito. I dati raccolti sono utilizzati esclusivamente per migliorare le prestazioni e l&rsquo;usabilit&agrave; del sito.</p>
-        <p>Quando configurati in modalit&agrave; anonimizzata, tali cookie possono essere assimilati ai cookie tecnici.</p>
-
-        <h3>2.3 Cookie di marketing e profilazione</h3>
-        <p>Previo consenso dell&rsquo;utente, il sito pu&ograve; utilizzare cookie di marketing o profilazione per:</p>
-        <ul>
-          <li>analizzare il comportamento di navigazione</li>
-          <li>misurare l&rsquo;efficacia delle campagne pubblicitarie</li>
-          <li>mostrare contenuti o annunci personalizzati</li>
-        </ul>
-        <p>Tra i servizi utilizzati: <strong>Meta Pixel (Facebook / Instagram)</strong> &mdash; per monitorare le conversioni e migliorare le attivit&agrave; di marketing digitale.</p>
-
-        <h3>2.4 Cookie di terze parti</h3>
-        <p>Il sito pu&ograve; integrare servizi forniti da terze parti che possono installare cookie sul dispositivo dell&rsquo;utente. Tra questi:</p>
-        <ul>
-          <li>Google Analytics</li>
-          <li>Meta Platforms</li>
-          <li>Calendly &mdash; prenotazione appuntamenti</li>
-          <li>Hotjar &mdash; analisi dell&rsquo;esperienza utente</li>
-        </ul>
-        <p>Per ulteriori informazioni &egrave; possibile consultare le rispettive informative sulla privacy di ciascun servizio.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">3</span> Gestione del consenso</h2>
-        <p>Al primo accesso al sito, l&rsquo;utente visualizza un banner cookie che consente di:</p>
-        <ul>
-          <li>accettare tutti i cookie</li>
-          <li>rifiutare i cookie non necessari</li>
-          <li>personalizzare le preferenze</li>
-        </ul>
-        <p>Il consenso pu&ograve; essere modificato o revocato in qualsiasi momento tramite le impostazioni dei cookie presenti nel sito.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">4</span> Gestione dei cookie tramite browser</h2>
-        <p>Gli utenti possono gestire o disabilitare i cookie anche tramite le impostazioni del proprio browser. Le modalit&agrave; variano a seconda del browser utilizzato.</p>
-        <p>Disabilitando alcuni cookie il sito potrebbe non funzionare correttamente.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">5</span> Trasferimento dei dati extra UE</h2>
-        <p>Alcuni fornitori di servizi utilizzati dal sito potrebbero trattare dati al di fuori dello Spazio Economico Europeo. In tali casi il trasferimento avverr&agrave; nel rispetto delle disposizioni del GDPR, mediante l&rsquo;utilizzo di Clausole Contrattuali Standard o altri strumenti di garanzia adeguati.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">6</span> Modifiche alla Cookie Policy</h2>
-        <p>Starloom Srl si riserva il diritto di modificare la presente Cookie Policy in qualsiasi momento. Eventuali modifiche saranno pubblicate su questa pagina con indicazione della data di aggiornamento.</p>
+      <div class="form-success" id="formSuccess">
+        <div class="success-circle">&#10003;</div>
+        <h2>Candidatura inviata!</h2>
+        <p>Grazie per il tuo interesse. Il team di Starloom esaminer&agrave; il tuo profilo e ti contatter&agrave; al pi&ugrave; presto.</p>
       </div>
 
     </div>
   </div>
 
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <div class="modal-check">&#10003;</div>
+      <h2>Benvenuto nel Network Starloom</h2>
+      <p>Il profilo &egrave; stato creato con successo. Il team di Starloom esaminer&agrave; la tua candidatura e ti contatter&agrave; al pi&ugrave; presto.</p>
+      <button class="modal-btn" onclick="closeModal()">Chiudi</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div class="footer-grid">
@@ -235,14 +347,14 @@
           <ul class="footer-links">
             <li><a href="index.html#metodo">Metodo</a></li>
             <li><a href="index.html#aree">Aree di intervento</a></li>
-            <li><a href="/cdn-cgi/l/email-protection#afcec2c2c6c1c6dcdbddced5c6c0c1caefdcdbceddc3c0c0c281c6db">Contatti</a></li>
+            <li><a href="mailto:marco@starloom.it">Contatti</a></li>
           </ul>
         </div>
         <div>
           <p class="footer-col-title">Links</p>
           <ul class="footer-links">
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="cookie-policy.html" class="active">Cookie Policy</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
             <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
             <li><a href="privacy-docenti.html">Informativa Privacy Docenti</a></li>
           </ul>
@@ -250,11 +362,154 @@
         <div>
           <p class="footer-col-title">Contatti</p>
           <ul class="footer-links">
-            <li><a href="/cdn-cgi/l/email-protection#aacbc7c7c3c4c3d9ded8cbd0c3c5c4cfead9decbd8c6c5c5c784c3de">Parliamo del tuo progetto</a></li>
+            <li><a href="mailto:marco@starloom.it">Parliamo del tuo progetto</a></li>
             <li><a href="network-docenti.html">Sei un docente? Entra nel nostro network</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">&copy; 2026 Starloom &ndash; Tutti i diritti riservati.</div>
     </div>
-  <
+  </footer>
+
+  <script>
+    // Hamburger
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("open");
+      mobileMenu.classList.toggle("open");
+    });
+    document.querySelectorAll(".mobile-link").forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("open");
+        mobileMenu.classList.remove("open");
+      });
+    });
+
+    // Area checkbox styling + Altro field toggle
+    document.querySelectorAll(".area-item input[type=checkbox]").forEach(cb => {
+      cb.addEventListener("change", () => {
+        cb.closest(".area-item").classList.toggle("selected", cb.checked);
+      });
+    });
+    document.getElementById("cb-altro").addEventListener("change", function() {
+      document.getElementById("altro-field").classList.toggle("visible", this.checked);
+    });
+
+    // File upload preview + validation
+    function setupUpload(inputId, previewId, maxBytes, label) {
+      const input = document.getElementById(inputId);
+      const preview = document.getElementById(previewId);
+      input.addEventListener("change", () => {
+        const file = input.files[0];
+        if (!file) { preview.textContent = ""; return; }
+        if (file.size > maxBytes) {
+          preview.textContent = "⚠ File troppo grande (max " + label + ")";
+          preview.style.color = "#c0392b";
+          input.value = "";
+        } else {
+          preview.textContent = "✓ " + file.name;
+          preview.style.color = "#27ae60";
+        }
+      });
+    }
+    setupUpload("foto", "preview-foto", 100 * 1024, "100 KB");
+    setupUpload("cv",   "preview-cv",   1 * 1024 * 1024, "1 MB");
+
+    // Field error helpers
+    function setError(fieldId, show) {
+      document.getElementById(fieldId).classList.toggle("error", show);
+    }
+    function setSectionError(id, show) {
+      document.getElementById(id).classList.toggle("visible", show);
+    }
+
+    async function handleSubmit() {
+      const nome     = document.getElementById("nome").value.trim();
+      const cognome  = document.getElementById("cognome").value.trim();
+      const email    = document.getElementById("email").value.trim();
+      const telefono = document.getElementById("telefono").value.trim();
+      const foto     = document.getElementById("foto").files[0];
+      const cv       = document.getElementById("cv").files[0];
+      const areeChecked = document.querySelectorAll('input[name="aree"]:checked');
+      const privacy1 = document.getElementById("privacy1").checked;
+      const privacy2 = document.getElementById("privacy2").checked;
+      const altroText = document.getElementById("altro-text").value.trim();
+
+      let valid = true;
+
+      // Campi testo
+      setError("field-nome",     !nome);     if (!nome)     valid = false;
+      setError("field-cognome",  !cognome);  if (!cognome)  valid = false;
+      const emailOk = email && /^[^@]+@[^@]+\.[^@]+$/.test(email);
+      setError("field-email", !emailOk);     if (!emailOk)  valid = false;
+      setError("field-telefono", !telefono); if (!telefono) valid = false;
+
+      // Upload obbligatori
+      const uploadOk = foto && cv;
+      setSectionError("err-upload", !uploadOk);
+      if (!uploadOk) valid = false;
+
+      // Almeno un'area
+      const areeOk = areeChecked.length > 0;
+      setSectionError("err-aree", !areeOk);
+      if (!areeOk) valid = false;
+
+      // Privacy obbligatoria
+      setSectionError("err-privacy", !privacy1);
+      if (!privacy1) valid = false;
+
+      if (!valid) return;
+
+      // Raccogli aree selezionate
+      const aree = Array.from(areeChecked).map(cb => {
+        if (cb.value === 'altro' && altroText) return altroText;
+        return cb.value;
+      }).filter(Boolean);
+
+      // Disabilita bottone durante invio
+      const btn = document.getElementById("btnInvia");
+      btn.disabled = true;
+      btn.textContent = "Invio in corso...";
+
+      try {
+        const response = await fetch('/api/candidatura', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            nome, cognome, email, telefono,
+            aree, altro: altroText,
+            privacy1, privacy2,
+          }),
+        });
+
+        if (!response.ok) throw new Error('Errore server');
+
+        // Mostra modale di successo
+        document.getElementById("modalOverlay").classList.add("visible");
+
+      } catch (err) {
+        console.error(err);
+        alert("Si è verificato un errore nell'invio. Riprova tra qualche istante.");
+        btn.disabled = false;
+        btn.textContent = "Invia candidatura";
+      }
+    }
+
+    function closeModal() {
+      document.getElementById("modalOverlay").classList.remove("visible");
+      // Reset form
+      document.getElementById("formContainer").querySelectorAll("input, textarea").forEach(el => {
+        if (el.type === "checkbox") el.checked = false;
+        else el.value = "";
+      });
+      document.querySelectorAll(".area-item").forEach(el => el.classList.remove("selected"));
+      document.getElementById("altro-field").classList.remove("visible");
+      document.getElementById("preview-foto").textContent = "";
+      document.getElementById("preview-cv").textContent = "";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
