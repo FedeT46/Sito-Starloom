@@ -237,29 +237,17 @@
 
         <p class="form-section-label" style="margin-top:40px;">Documenti</p>
 
-        <div class="upload-grid">
-          <div class="upload-field">
-            <label>Foto profilo <strong style="color:#999;font-weight:400;">*</strong></label>
-            <p class="upload-label-sub">Max 100 KB &mdash; JPG, PNG</p>
-            <div class="upload-box" id="box-foto">
-              <input type="file" id="foto" accept="image/jpeg,image/png" />
-              <div class="upload-icon">&#128247;</div>
-              <p class="upload-box-label">Clicca per caricare<br>la tua foto</p>
-            </div>
-            <p class="upload-preview" id="preview-foto"></p>
+        <div class="field" id="field-cv">
+          <label>Curriculum Vitae <strong style="color:#999;font-weight:400;">*</strong></label>
+          <p class="upload-label-sub">Max 1 MB &mdash; PDF</p>
+          <div class="upload-box" id="box-cv">
+            <input type="file" id="cv" accept="application/pdf" />
+            <div class="upload-icon">&#128196;</div>
+            <p class="upload-box-label">Clicca per caricare<br>il tuo CV</p>
           </div>
-          <div class="upload-field">
-            <label>Curriculum Vitae <strong style="color:#999;font-weight:400;">*</strong></label>
-            <p class="upload-label-sub">Max 1 MB &mdash; PDF</p>
-            <div class="upload-box" id="box-cv">
-              <input type="file" id="cv" accept="application/pdf" />
-              <div class="upload-icon">&#128196;</div>
-              <p class="upload-box-label">Clicca per caricare<br>il tuo CV</p>
-            </div>
-            <p class="upload-preview" id="preview-cv"></p>
-          </div>
+          <p class="upload-preview" id="preview-cv"></p>
         </div>
-        <p class="section-error" id="err-upload">Foto profilo e CV sono obbligatori.</p>
+        <p class="section-error" id="err-upload">Il CV è obbligatorio.</p>
 
         <p class="form-section-label" style="margin-top:40px;">Aree di insegnamento</p>
         <p style="font-size:13px;color:#666;margin-bottom:18px;">Seleziona una o pi&ugrave; aree in cui operi.</p>
@@ -413,8 +401,7 @@
         }
       });
     }
-    setupUpload("foto", "preview-foto", 100 * 1024, "100 KB");
-    setupUpload("cv",   "preview-cv",   1 * 1024 * 1024, "1 MB");
+    setupUpload("cv", "preview-cv", 1 * 1024 * 1024, "1 MB");
 
     // Field error helpers
     function setError(fieldId, show) {
@@ -429,7 +416,6 @@
       const cognome  = document.getElementById("cognome").value.trim();
       const email    = document.getElementById("email").value.trim();
       const telefono = document.getElementById("telefono").value.trim();
-      const foto     = document.getElementById("foto").files[0];
       const cv       = document.getElementById("cv").files[0];
       const areeChecked = document.querySelectorAll('input[name="aree"]:checked');
       const privacy1 = document.getElementById("privacy1").checked;
@@ -438,54 +424,53 @@
 
       let valid = true;
 
-      // Campi testo
       setError("field-nome",     !nome);     if (!nome)     valid = false;
       setError("field-cognome",  !cognome);  if (!cognome)  valid = false;
       const emailOk = email && /^[^@]+@[^@]+\.[^@]+$/.test(email);
       setError("field-email", !emailOk);     if (!emailOk)  valid = false;
       setError("field-telefono", !telefono); if (!telefono) valid = false;
 
-      // Upload obbligatori
-      const uploadOk = foto && cv;
+      const uploadOk = !!cv;
       setSectionError("err-upload", !uploadOk);
       if (!uploadOk) valid = false;
 
-      // Almeno un'area
       const areeOk = areeChecked.length > 0;
       setSectionError("err-aree", !areeOk);
       if (!areeOk) valid = false;
 
-      // Privacy obbligatoria
       setSectionError("err-privacy", !privacy1);
       if (!privacy1) valid = false;
 
       if (!valid) return;
 
-      // Raccogli aree selezionate
       const aree = Array.from(areeChecked).map(cb => {
         if (cb.value === 'altro' && altroText) return altroText;
         return cb.value;
       }).filter(Boolean);
 
-      // Disabilita bottone durante invio
       const btn = document.getElementById("btnInvia");
       btn.disabled = true;
       btn.textContent = "Invio in corso...";
 
       try {
+        const formData = new FormData();
+        formData.append('nome', nome);
+        formData.append('cognome', cognome);
+        formData.append('email', email);
+        formData.append('telefono', telefono);
+        formData.append('altro', altroText);
+        formData.append('privacy1', privacy1);
+        formData.append('privacy2', privacy2);
+        aree.forEach(a => formData.append('aree', a));
+        if (cv) formData.append('cv', cv);
+
         const response = await fetch('/api/candidatura', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            nome, cognome, email, telefono,
-            aree, altro: altroText,
-            privacy1, privacy2,
-          }),
+          body: formData,
         });
 
         if (!response.ok) throw new Error('Errore server');
 
-        // Mostra modale di successo
         document.getElementById("modalOverlay").classList.add("visible");
 
       } catch (err) {
