@@ -8,22 +8,42 @@ export const config = {
   },
 };
 
-async function uploadCV(filePath, originalName) {
+async function uploadToSupabase(filePath, fileName, supabaseUrl, supabaseKey) {
   const fileBuffer = fs.readFileSync(filePath);
-  const fileName = originalName || path.basename(filePath);
+  const filePath2 = `cv/${Date.now()}_${fileName}`;
 
-  const response = await fetch(`https://transfer.sh/${encodeURIComponent(fileName)}`, {
-    method: 'PUT',
+  const uploadRes = await fetch(`${supabaseUrl}/storage/v1/object/cv-docenti/${filePath2}`, {
+    method: 'POST',
     headers: {
+      'Authorization': `Bearer ${supabaseKey}`,
       'Content-Type': 'application/pdf',
-      'Max-Days': '365',
+      'x-upsert': 'true',
     },
     body: fileBuffer,
   });
 
-  if (!response.ok) throw new Error(`transfer.sh error: ${response.status}`);
-  const url = await response.text();
-  return url.trim();
+  if (!uploadRes.ok) {
+    const err = await uploadRes.text();
+    throw new Error(`Supabase upload error: ${err}`);
+  }
+
+  // Generate signed URL valid for 1 year (31536000 seconds)
+  const signRes = await fetch(`${supabaseUrl}/storage/v1/object/sign/cv-docenti/${filePath2}`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${supabaseKey}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ expiresIn: 31536000 }),
+  });
+
+  if (!signRes.ok) {
+    const err = await signRes.text();
+    throw new Error(`Supabase sign error: ${err}`);
+  }
+
+  const signData = await signRes.json();
+  return `${supabaseUrl}/storage/v1${signData.signedURL}`;
 }
 
 export default async function handler(req, res) {
@@ -58,15 +78,18 @@ export default async function handler(req, res) {
     const areeArray = Array.isArray(areeRaw) ? areeRaw : (areeRaw ? [areeRaw] : []);
     const multiSelect = areeArray.map(a => ({ name: a }));
 
-    const NOTION_TOKEN = process.env.NOTION_TOKEN;
-    const NOTION_DB_ID = process.env.NOTION_DB_ID;
+    const NOTION_TOKEN  = process.env.NOTION_TOKEN;
+    const NOTION_DB_ID  = process.env.NOTION_DB_ID;
+    const SUPABASE_URL  = process.env.SUPABASE_URL;
+    const SUPABASE_KEY  = process.env.SUPABASE_KEY;
 
-    // Upload CV
+    // Upload CV to Supabase
     let cvUrl = '';
     const cvFile = files.cv ? (Array.isArray(files.cv) ? files.cv[0] : files.cv) : null;
     if (cvFile && cvFile.filepath) {
       try {
-        cvUrl = await uploadCV(cvFile.filepath, cvFile.originalFilename || 'cv.pdf');
+        const fileName = cvFile.originalFilename || 'cv.pdf';
+        cvUrl = await uploadToSupabase(cvFile.filepath, fileName, SUPABASE_URL, SUPABASE_KEY);
       } catch (e) {
         console.error('CV upload error:', e);
       }
