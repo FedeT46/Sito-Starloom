@@ -83,6 +83,9 @@ export default async function handler(req, res) {
     const SUPABASE_URL  = process.env.SUPABASE_URL;
     const SUPABASE_KEY  = process.env.SUPABASE_KEY;
 
+    console.log('NOTION_TOKEN starts with:', NOTION_TOKEN ? NOTION_TOKEN.substring(0, 10) : 'UNDEFINED');
+    console.log('NOTION_DB_ID:', NOTION_DB_ID ? NOTION_DB_ID.substring(0, 8) : 'UNDEFINED');
+
     // Upload CV to Supabase
     let cvUrl = '';
     const cvFile = files.cv ? (Array.isArray(files.cv) ? files.cv[0] : files.cv) : null;
