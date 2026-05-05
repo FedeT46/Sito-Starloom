@@ -70,6 +70,7 @@ export default async function handler(req, res) {
     const cognome   = get(fields.cognome);
     const email     = get(fields.email);
     const telefono  = get(fields.telefono);
+    const citta     = get(fields.citta);
     const altroText = get(fields.altro);
     const privacy1  = get(fields.privacy1) === 'true';
     const privacy2  = get(fields.privacy2) === 'true';
@@ -105,6 +106,7 @@ export default async function handler(req, res) {
         'Cognome':               { rich_text:    [{ text: { content: cognome } }] },
         'Email':                 { email:        email || null },
         'Telefono':              { phone_number: telefono || null },
+        'Città docenza':         { rich_text:    [{ text: { content: citta } }] },
         'Aree di insegnamento':  { multi_select: multiSelect },
         'Altro (area)':          { rich_text:    [{ text: { content: altroText } }] },
         'Privacy accettata':     { checkbox:     privacy1 },
