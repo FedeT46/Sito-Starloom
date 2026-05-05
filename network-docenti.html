@@ -235,6 +235,12 @@
           <span class="field-error">Campo obbligatorio</span>
         </div>
 
+        <div class="field" id="field-citta">
+          <label>Città preferita per la docenza <span class="req">*</span></label>
+          <input type="text" id="citta" placeholder="Es. Milano, Roma, Catania..." />
+          <span class="field-error">Campo obbligatorio</span>
+        </div>
+
         <p class="form-section-label" style="margin-top:40px;">Documenti</p>
 
         <div class="field" id="field-cv">
@@ -289,7 +295,7 @@
         <div class="privacy-group" style="margin-bottom:32px;">
           <div class="privacy-item">
             <input type="checkbox" id="privacy1" />
-            <span>Dichiaro di aver letto l&rsquo;<a href="privacy-docenti.html">Informativa Privacy Docenti</a> e autorizzo il trattamento dei dati per la gestione della candidatura. <strong>*</strong></span>
+            <span>Dichiaro di aver letto l&rsquo;<a href="privacy-policy.html">Informativa Privacy Docenti</a> e autorizzo il trattamento dei dati per la gestione della candidatura. <strong>*</strong></span>
           </div>
           <div class="privacy-item">
             <input type="checkbox" id="privacy2" />
@@ -417,6 +423,7 @@
       const cognome  = document.getElementById("cognome").value.trim();
       const email    = document.getElementById("email").value.trim();
       const telefono = document.getElementById("telefono").value.trim();
+      const citta    = document.getElementById("citta").value.trim();
       const cv       = document.getElementById("cv").files[0];
       const areeChecked = document.querySelectorAll('input[name="aree"]:checked');
       const privacy1 = document.getElementById("privacy1").checked;
@@ -430,6 +437,8 @@
       const emailOk = email && /^[^@]+@[^@]+\.[^@]+$/.test(email);
       setError("field-email", !emailOk);     if (!emailOk)  valid = false;
       setError("field-telefono", !telefono); if (!telefono) valid = false;
+
+      setError("field-citta", !citta); if (!citta) valid = false;
 
       const uploadOk = !!cv;
       setSectionError("err-upload", !uploadOk);
@@ -459,6 +468,7 @@
         formData.append('cognome', cognome);
         formData.append('email', email);
         formData.append('telefono', telefono);
+        formData.append('citta', citta);
         formData.append('altro', altroText);
         formData.append('privacy1', privacy1);
         formData.append('privacy2', privacy2);
