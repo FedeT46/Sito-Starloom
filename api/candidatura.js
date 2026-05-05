@@ -91,9 +91,12 @@ export default async function handler(req, res) {
     let cvUrl = '';
     const cvFile = files.cv ? (Array.isArray(files.cv) ? files.cv[0] : files.cv) : null;
     if (cvFile && cvFile.filepath) {
-      try {
-        const fileName = cvFile.originalFilename || 'cv.pdf';
-        cvUrl = await uploadToSupabase(cvFile.filepath, fileName, SUPABASE_URL, SUPABASE_KEY);
+      try {const rawName = cvFile.originalFilename || 'cv.pdf';
+const safeName = rawName
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .replace(/[^a-zA-Z0-9._-]/g, '_');
+cvUrl = await uploadToSupabase(cvFile.filepath, safeName, SUPABASE_URL, SUPABASE_KEY);
       } catch (e) {
         console.error('CV upload error:', e);
       }
