@@ -1,0 +1,50 @@
+[
+  {
+    "id": "articolo-1",
+    "titolo": "AI Skills Gap 2026: Perché il 65% dei Progetti AI Fallisce (e Come Evitarlo)",
+    "sommario": "Il divario di competenze AI costerà 5.500 miliardi di dollari entro il 2026. Scopri perché i progetti di intelligenza artificiale falliscono e come evitarlo con un metodo strutturato.",
+    "immagine": "img/articolo-1.jpeg",
+    "data": "2026-07-24",
+    "dataLeggibile": "24 Luglio 2026",
+    "categoria": "Artificial Intelligence",
+    "minLettura": 7,
+    "inEvidenza": true,
+    "ordineEvidenza": 1
+  },
+  {
+    "id": "articolo-2",
+    "titolo": "Prompt Engineering per Aziende: la Competenza Chiave del 2026",
+    "sommario": "La competenza che determina se un'azienda ottiene valore reale dagli strumenti di AI generativa o continua a usarli come un motore di ricerca più elaborato.",
+    "immagine": "img/articolo-2.jpeg",
+    "data": "2026-07-24",
+    "dataLeggibile": "24 Luglio 2026",
+    "categoria": "Artificial Intelligence",
+    "minLettura": 6,
+    "inEvidenza": true,
+    "ordineEvidenza": 2
+  },
+  {
+    "id": "articolo-3",
+    "titolo": "Competenze più Richieste nel 2026: la Guida per le Aziende",
+    "sommario": "L'AI sta ridisegnando i profili professionali più velocemente di quanto le aziende riescano ad aggiornare i propri organigrammi. Ecco cosa fare.",
+    "immagine": "img/articolo-3.jpeg",
+    "data": "2026-07-24",
+    "dataLeggibile": "24 Luglio 2026",
+    "categoria": "Digital Strategy",
+    "minLettura": 6,
+    "inEvidenza": true,
+    "ordineEvidenza": 3
+  },
+  {
+    "id": "articolo-4",
+    "titolo": "AI Act: Scadenza 2 Agosto 2026, Cosa Devono Fare le Aziende",
+    "sommario": "Dal 2 agosto 2026 l'AI Act raggiunge la piena applicazione. Ecco cosa prevede l'obbligo di alfabetizzazione IA per il personale e come adeguarsi prima della scadenza.",
+    "immagine": "img/articolo-4.jpeg",
+    "data": "2026-07-24",
+    "dataLeggibile": "24 Luglio 2026",
+    "categoria": "Normativa & AI Act",
+    "minLettura": 7,
+    "inEvidenza": true,
+    "ordineEvidenza": 4
+  }
+]
