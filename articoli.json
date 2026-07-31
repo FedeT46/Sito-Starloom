@@ -9,7 +9,7 @@
     "categoria": "Artificial Intelligence",
     "minLettura": 7,
     "inEvidenza": true,
-    "ordineEvidenza": 1
+    "ordineEvidenza": 3
   },
   {
     "id": "articolo-2",
@@ -20,8 +20,8 @@
     "dataLeggibile": "24 Luglio 2026",
     "categoria": "Artificial Intelligence",
     "minLettura": 6,
-    "inEvidenza": true,
-    "ordineEvidenza": 2
+    "inEvidenza": false,
+    "ordineEvidenza": 
   },
   {
     "id": "articolo-3",
@@ -33,7 +33,7 @@
     "categoria": "Digital Strategy",
     "minLettura": 6,
     "inEvidenza": true,
-    "ordineEvidenza": 3
+    "ordineEvidenza": 2
   },
   {
     "id": "articolo-4",
@@ -45,6 +45,6 @@
     "categoria": "Normativa & AI Act",
     "minLettura": 7,
     "inEvidenza": true,
-    "ordineEvidenza": 4
+    "ordineEvidenza": 1
   }
 ]
