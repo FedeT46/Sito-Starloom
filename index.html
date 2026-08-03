@@ -1146,6 +1146,80 @@
     </div>
   </section>
 
+  <!-- LOGHI CLIENTI -->
+  <style>
+    .loghi-section {
+      background: #ffffff;
+      padding: 4rem 0;
+      overflow: hidden;
+    }
+    .loghi-section h2 {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #111827;
+      margin: 0 0 2.5rem;
+    }
+    .loghi-track-wrap {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+    }
+    .loghi-track {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      animation: loghi-scroll 28s linear infinite;
+    }
+    .loghi-track:hover {
+      animation-play-state: paused;
+    }
+    .loghi-track img {
+      height: 56px;
+      width: auto;
+      margin: 0 2.75rem;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.65;
+      transition: filter 0.25s ease, opacity 0.25s ease;
+    }
+    .loghi-track img:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+    @keyframes loghi-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+  </style>
+  <section class="loghi-section" id="loghi">
+    <div class="section-inner">
+      <h2>Abbiamo lavorato con</h2>
+      <div class="loghi-track-wrap">
+        <div class="loghi-track">
+          <img src="img/loghi/digited.png" alt="Digit'Ed" loading="lazy">
+          <img src="img/loghi/citta-metropolitana-bologna.png" alt="Città Metropolitana di Bologna" loading="lazy">
+          <img src="img/loghi/comune-bologna.png" alt="Comune di Bologna" loading="lazy">
+          <img src="img/loghi/formedil.png" alt="Formedil" loading="lazy">
+          <img src="img/loghi/strategie-digitali.png" alt="Strategie Digitali - 360 Growth Factory" loading="lazy">
+          <img src="img/loghi/bologna-innovation-square.png" alt="Bologna Innovation Square" loading="lazy">
+          <img src="img/loghi/42skills.png" alt="42skills" loading="lazy">
+          <!-- duplicated set for seamless infinite loop -->
+          <img src="img/loghi/digited.png" alt="" aria-hidden="true" loading="lazy">
+          <img src="img/loghi/citta-metropolitana-bologna.png" alt="" aria-hidden="true" loading="lazy">
+          <img src="img/loghi/comune-bologna.png" alt="" aria-hidden="true" loading="lazy">
+          <img src="img/loghi/formedil.png" alt="" aria-hidden="true" loading="lazy">
+          <img src="img/loghi/strategie-digitali.png" alt="" aria-hidden="true" loading="lazy">
+          <img src="img/loghi/bologna-innovation-square.png" alt="" aria-hidden="true" loading="lazy">
+          <img src="img/loghi/42skills.png" alt="" aria-hidden="true" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- AREE DI INTERVENTO -->
   <section class="aree-section" id="aree">
     <div class="section-inner">
