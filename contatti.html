@@ -326,20 +326,20 @@
             <label for="tipoOrg">Tu sei*</label>
             <select id="tipoOrg" name="tipoOrg" required>
               <option value="">Seleziona...</option>
-              <option value="azienda">Azienda</option>
-              <option value="ente-pubblico">Ente pubblico / Istituzione</option>
-              <option value="docente">Docente / Formatore</option>
-              <option value="altro">Altro</option>
+              <option value="Azienda">Azienda</option>
+              <option value="Ente pubblico / Istituzione">Ente pubblico / Istituzione</option>
+              <option value="Docente / Formatore">Docente / Formatore</option>
+              <option value="Altro">Altro</option>
             </select>
           </div>
           <div class="form-group">
             <label for="interesse">Area di interesse</label>
             <select id="interesse" name="interesse">
               <option value="">Seleziona...</option>
-              <option value="assessment">Assessment & Skills Gap Analysis</option>
-              <option value="learning-design">Learning Design</option>
-              <option value="program-coordination">Program Coordination</option>
-              <option value="altro">Altro</option>
+              <option value="Assessment & Skills Gap Analysis">Assessment & Skills Gap Analysis</option>
+              <option value="Learning Design">Learning Design</option>
+              <option value="Program Coordination">Program Coordination</option>
+              <option value="Altro">Altro</option>
             </select>
           </div>
         </div>
@@ -350,12 +350,12 @@
         </div>
 
         <label class="form-privacy">
-          <input type="checkbox" required>
+          <input type="checkbox" id="privacy1" required>
           <span>Dichiaro di aver letto e di accettare <a href="privacy-policy.html">l'informativa al trattamento dei miei dati personali</a> fornita da Starloom Srl ai sensi del Regolamento UE 2016/679 e della normativa nazionale in materia di protezione dei dati personali.*</span>
         </label>
 
         <label class="form-privacy">
-          <input type="checkbox">
+          <input type="checkbox" id="privacy2">
           <span>Acconsento al trattamento dei miei dati personali al fine di ricevere comunicazioni commerciali, promozionali e newsletter da parte di Starloom Srl.</span>
         </label>
 
@@ -416,9 +416,46 @@
         mobileMenu.classList.remove('open');
       });
     });
-    document.getElementById('contattiForm').addEventListener('submit', function(e) {
+    document.getElementById('contattiForm').addEventListener('submit', async function(e) {
       e.preventDefault();
-      alert('Modulo di test — l\'invio reale verra collegato in seguito.');
+
+      const submitBtn = document.querySelector('.btn-submit-contatti');
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Invio in corso...';
+
+      const payload = {
+        nome:      document.getElementById('nome').value,
+        cognome:   document.getElementById('cognome').value,
+        email:     document.getElementById('email').value,
+        telefono:  document.getElementById('telefono').value,
+        azienda:   document.getElementById('azienda').value,
+        ruolo:     document.getElementById('ruolo').value,
+        tipoOrg:   document.getElementById('tipoOrg').value,
+        interesse: document.getElementById('interesse').value,
+        richiesta: document.getElementById('richiesta').value,
+        privacy1:  document.getElementById('privacy1').checked,
+        privacy2:  document.getElementById('privacy2').checked,
+      };
+
+      try {
+        const res = await fetch('/api/contatto', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        if (!res.ok) throw new Error('Invio fallito');
+
+        document.getElementById('contattiForm').innerHTML =
+          '<p style="font-size:17px;font-weight:600;color:#111827;text-align:center;padding:40px 0;">Grazie! La tua richiesta è stata inviata con successo.<br><span style="font-weight:400;font-size:14px;color:#6b7280;">Ti ricontatteremo il prima possibile.</span></p>';
+
+      } catch (err) {
+        console.error(err);
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        alert('Si è verificato un errore durante l\'invio. Riprova, oppure scrivici direttamente a marco@starloom.it.');
+      }
     });
   </script>
 </body>
