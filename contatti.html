@@ -137,19 +137,25 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1.05fr;
+      grid-template-areas:
+        "intro   form"
+        "features form";
       gap: 64px;
       align-items: start;
       position: relative;
       z-index: 1;
     }
-    .contatti-left h1 {
+    .contatti-intro { grid-area: intro; }
+    .contatti-features { grid-area: features; }
+    .contatti-form { grid-area: form; }
+    .contatti-intro h1 {
       font-size: clamp(32px, 4vw, 44px);
       font-weight: 700;
       color: #ffffff;
       margin-bottom: 14px;
       line-height: 1.1;
     }
-    .contatti-left > p {
+    .contatti-intro > p {
       font-size: 15px;
       color: rgba(255,255,255,0.82);
       max-width: 460px;
@@ -225,7 +231,14 @@
     .btn-submit-contatti:hover { transform: translateY(-2px); box-shadow: 0 16px 32px -8px rgba(242,113,42,0.7); }
 
     @media (max-width: 980px) {
-      .contatti-inner { grid-template-columns: 1fr; gap: 40px; }
+      .contatti-inner {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "intro"
+          "form"
+          "features";
+        gap: 32px;
+      }
       .contatti-section { padding: 48px 20px 64px; }
       .contatti-form { padding: 28px; }
     }
@@ -263,10 +276,12 @@
   <!-- CONTATTI -->
   <section class="contatti-section" id="contatti">
     <div class="contatti-inner">
-      <div class="contatti-left">
+      <div class="contatti-intro">
         <h1>Parliamo del tuo progetto.</h1>
         <p>Starloom accompagna organizzazioni e istituzioni nello sviluppo delle competenze digitali. Raccontaci le tue esigenze: ti ricontattiamo per un primo confronto strategico, senza impegno.</p>
+      </div>
 
+      <div class="contatti-features">
         <div class="contatti-feature">
           <div class="icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
