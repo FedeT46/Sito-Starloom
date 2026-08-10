@@ -48,7 +48,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 48px;
-      height: 72px;
+      height: 64px;
       position: sticky;
       top: 0;
       background: rgba(255,255,255,0.96);
@@ -56,12 +56,14 @@
       border-bottom: 1px solid rgba(0,0,0,0.06);
       z-index: 100;
     }
-    .nav-logo img { height: 28px; width: auto; }
+    .nav-logo img { height: 22px; width: auto; display: block; }
     .nav-links { display: flex; gap: 36px; }
     .nav-links a {
-      font-size: 14px;
-      font-weight: 500;
-      opacity: 0.75;
+      font-size: 15px;
+      font-weight: 700;
+      color: #111111;
+      text-decoration: none;
+      opacity: 0.85;
       transition: opacity 0.2s;
     }
     .nav-links a:hover { opacity: 1; }
@@ -128,7 +130,7 @@
     /* ── CONTATTI HERO/FORM ── */
     .contatti-section {
       background: linear-gradient(122deg, var(--m-blue) 0%, var(--m-violet) 55%, var(--m-violet-2) 100%);
-      padding: 64px 48px 96px;
+      padding: 72px 48px 96px;
       position: relative;
       overflow: hidden;
     }
@@ -239,7 +241,7 @@
           "features";
         gap: 32px;
       }
-      .contatti-section { padding: 48px 20px 64px; }
+      .contatti-section { padding: 56px 20px 64px; }
       .contatti-form { padding: 28px; }
     }
     @media (max-width: 520px) {
