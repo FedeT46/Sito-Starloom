@@ -4,7 +4,7 @@
   <script type="text/javascript" src="https://embeds.iubenda.com/widgets/074c8232-2012-4949-870b-7fb04467ce1a.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Starloom — Trasformiamo le competenze digitali in vantaggio strategico</title>
+  <title>Terms &amp; Conditions — Starloom</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -20,1292 +20,226 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --black: #0a0a0a;
-      --dark: #1a1a1a;
-      --card-bg: #2a2a2a;
-      --white: #ffffff;
-      --gray: #888888;
-      --light-gray: #f5f5f5;
-      --accent: #b8f03a;
+      --black: #0a0a0a; --white: #ffffff; --gray: #888888;
+      --light-gray: #f5f5f5; --border: #e8e8e8; --accent: #b8f03a;
       --font-serif: "Poppins", sans-serif;
       --font-sans: "Poppins", sans-serif;
     }
-
     html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
 
-    body {
-      font-family: var(--font-sans);
-      background: var(--white);
-      color: var(--black);
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── NAVBAR ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 48px;
-      height: 64px;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .nav-logo img {
-      height: 22px;
-      width: auto;
-      display: block;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 40px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 15px;
-      font-weight: 700;
-      color: #111111;
-      text-decoration: none;
-      opacity: 0.85;
-      transition: opacity 0.2s;
-    }
-
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: #ffffff; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 64px; border-bottom: 1px solid rgba(0,0,0,0.08); box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 22px; width: auto; display: block; }
+    .nav-links { display: flex; gap: 40px; list-style: none; }
+    .nav-links a { font-size: 15px; font-weight: 700; color: #111111; text-decoration: none; opacity: 0.85; transition: opacity 0.2s; }
     .nav-links a:hover { opacity: 1; }
 
-    /* ── HAMBURGER ── */
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      width: 36px;
-      height: 36px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 4px;
-      z-index: 200;
-    }
-
-    .nav-hamburger span {
-      display: block;
-      height: 1.5px;
-      background: #111111;
-      border-radius: 2px;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-      transform-origin: center;
-    }
-
+    .nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; cursor: pointer; background: none; border: none; padding: 4px; z-index: 200; }
+    .nav-hamburger span { display: block; height: 1.5px; background: #111111; border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; transform-origin: center; }
     .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
     .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-    .nav-mobile-menu {
-      display: none;
-      position: fixed;
-      top: 56px; left: 0; right: 0;
-      background: #ffffff;
-      border-top: 1px solid rgba(0,0,0,0.08);
-      padding: 24px 20px 32px;
-      z-index: 99;
-      flex-direction: column;
-      gap: 0;
-    }
-
+    .nav-mobile-menu { display: none; position: fixed; top: 56px; left: 0; right: 0; background: #ffffff;
+      border-top: 1px solid rgba(0,0,0,0.08); padding: 24px 20px 32px; z-index: 99; flex-direction: column; gap: 0; }
     .nav-mobile-menu.open { display: flex; }
-
-    .nav-mobile-menu a {
-      font-size: 18px;
-      font-weight: 400;
-      color: rgba(0,0,0,0.8);
-      text-decoration: none;
-      padding: 16px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-      transition: color 0.2s;
-    }
-
+    .nav-mobile-menu a { font-size: 18px; font-weight: 400; color: rgba(0,0,0,0.8); text-decoration: none; padding: 16px 0; border-bottom: 1px solid rgba(0,0,0,0.08); transition: color 0.2s; }
     .nav-mobile-menu a:last-child { border-bottom: none; }
     .nav-mobile-menu a:hover { color: #000000; }
 
-    /* ── HERO ── */
-    .hero {
-      background:
-        linear-gradient(135deg, rgba(37,99,235,0.82) 0%, rgba(124,58,237,0.86) 100%),
-        url('img/hero-classroom.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 120px 48px 80px;
-    }
+    .page { padding-top: 64px; min-height: 100vh; }
+
+    .policy-hero { background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%); padding: 72px 48px 64px; text-align: center; }
+    .policy-hero h1 { font-family: var(--font-serif); font-size: clamp(36px, 5vw, 60px); font-weight: 800; color: var(--white); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .policy-hero .meta { font-size: 14px; color: rgba(255,255,255,0.4); font-weight: 300; }
+
+    .policy-content { max-width: 780px; margin: 0 auto; padding: 72px 48px 100px; }
+
+    .policy-intro { background: var(--light-gray); border-radius: 12px; padding: 28px 32px; margin-bottom: 56px; }
+    .policy-intro p { font-size: 15px; color: #444; line-height: 1.75; margin-bottom: 12px; }
+    .policy-intro p:last-child { margin-bottom: 0; }
+    .policy-intro strong { font-weight: 500; color: var(--black); }
+    .policy-intro a { color: var(--black); text-decoration: underline; text-underline-offset: 3px; }
+
+    .policy-section { margin-bottom: 52px; padding-bottom: 52px; border-bottom: 1px solid var(--border); }
+    .policy-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .policy-section h2 { font-family: var(--font-sans); font-size: 20px; font-weight: 500; color: var(--black); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+    .policy-section h2 .num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; min-width: 28px; background: #7C3AED; color: var(--white); border-radius: 50%; font-size: 12px; font-weight: 500; }
+    .policy-section p { font-size: 15px; color: #444; line-height: 1.8; margin-bottom: 14px; }
+    .policy-section p:last-child { margin-bottom: 0; }
+    .policy-section ul { list-style: none; margin: 12px 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .policy-section ul li { font-size: 15px; color: #444; line-height: 1.7; padding-left: 20px; position: relative; }
+    .policy-section ul li::before { content: ""; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--black); border-radius: 50%; opacity: 0.25; }
+    .policy-section a { color: var(--black); text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
+    .policy-section a:hover { opacity: 0.6; }
+
+    footer { background: #ffffff; padding: 72px 48px 40px; border-top: 1px solid rgba(0,0,0,0.08); }
+    .footer-inner { max-width: 1140px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
+    .footer-brand { font-size: 16px; font-weight: 500; color: var(--black); margin-bottom: 12px; }
+    .footer-brand-desc { font-size: 13px; color: rgba(0,0,0,0.5); line-height: 1.6; }
+    .footer-col-title { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(0,0,0,0.4); margin-bottom: 20px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .footer-links a { font-size: 14px; color: rgba(0,0,0,0.7); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover, .footer-links a.active { color: #000000; }
+    .footer-bottom { border-top: 1px solid rgba(0,0,0,0.08); padding-top: 28px; font-size: 12px; color: rgba(0,0,0,0.35); }
 
-    .hero h1 {
-      font-family: var(--font-serif);
-      font-size: clamp(42px, 7vw, 82px);
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1.1;
-      max-width: 820px;
-      margin-bottom: 32px;
-      letter-spacing: -0.02em;
-    }
-
-    .hero p {
-      font-size: 20px;
-      font-weight: 300;
-      color: rgba(255,255,255,0.88);
-      max-width: 580px;
-      margin-bottom: 52px;
-      line-height: 1.7;
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 16px 32px;
-      border-radius: 999px;
-      font-family: var(--font-sans);
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    .btn-white {
-      background: linear-gradient(135deg, #F2712A, #F58B3C);
-      color: #ffffff;
-      border: none;
-      box-shadow: 0 12px 28px -10px rgba(242,113,42,0.55);
-    }
-
-    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 16px 32px -8px rgba(242,113,42,0.7); }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.5);
-    }
-
-    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.05); }
-
-    /* ── SECTION COMMON ── */
-    section { padding: 100px 48px; }
-
-    .section-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-    }
-
-    /* ── INFO / STATS ── */
-    .stats-section {
-      background: var(--white);
-      text-align: center;
-    }
-
-    .stats-title {
-      font-family: var(--font-sans);
-      font-size: 18px;
-      font-weight: 500;
-      color: var(--black);
-      margin-bottom: 64px;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
-      margin-bottom: 100px;
-    }
-
-    .stat-item {}
-
-    .stat-number {
-      font-family: var(--font-sans);
-      font-size: 52px;
-      font-weight: 700;
-      color: #7C3AED;
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-
-    .stat-label {
-      font-size: 16px;
-      font-weight: 400;
-      color: var(--gray);
-    }
-
-    .divider { border: none; border-top: 1px solid #e8e8e8; margin-bottom: 72px; }
-
-    .risk-title {
-      font-family: var(--font-serif);
-      font-size: clamp(26px, 3.5vw, 42px);
-      font-weight: 800;
-      color: var(--black);
-      max-width: 760px;
-      line-height: 1.2;
-      margin-bottom: 56px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-
-    .risk-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      text-align: center;
-    }
-
-    .risk-item { display: flex; flex-direction: column; align-items: center; color: #2563EB; }
-
-    .risk-icon {
-      width: 32px;
-      height: 32px;
-      margin-bottom: 16px;
-      color: #2563EB;
-      opacity: 1;
-    }
-
-    .risk-item p {
-      font-size: 17px;
-      color: #444 !important;
-      line-height: 1.65;
-    }
-
-    /* ── SERVIZI (metodo) ── */
-    :root {
-      --m-blue: #3D57E8;
-      --m-violet: #6B3FE0;
-      --m-violet-2: #7C4CE0;
-      --m-card: rgba(255,255,255,0.10);
-      --m-card-border: rgba(255,255,255,0.20);
-      --m-card-hover: rgba(255,255,255,0.16);
-      --m-ink: #FFFFFF;
-      --m-ink-dim: rgba(255,255,255,0.72);
-      --m-ink-faint: rgba(255,255,255,0.5);
-      --m-orange: #F2712A;
-      --m-orange-2: #F58B3C;
-      --m-star: #FFD98A;
-    }
-
-    .metodo {
-      position: relative;
-      background: linear-gradient(122deg, var(--m-blue) 0%, var(--m-violet) 55%, var(--m-violet-2) 100%);
-      color: var(--m-ink);
-      padding: 6.5rem 1.5rem 6rem;
-      overflow: hidden;
-      font-family: 'Inter', sans-serif;
-      text-align: center;
-    }
-
-    .metodo__stars { position: absolute; inset: 0; pointer-events: none; opacity: 0.55; }
-    .metodo__stars span { position: absolute; width: 3px; height: 3px; background: #fff; border-radius: 50%; opacity: 0.5; animation: metodo-twinkle 4.5s ease-in-out infinite; }
-    @keyframes metodo-twinkle { 0%, 100% { opacity: 0.15; } 50% { opacity: 0.75; } }
-
-    .metodo__inner { position: relative; max-width: 1180px; margin: 0 auto; text-align: center; }
-
-    .metodo .eyebrow {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--m-star);
-      margin: 0 0 1rem;
-    }
-
-    .metodo__title {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 800;
-      font-size: clamp(2.1rem, 4.2vw, 3rem);
-      line-height: 1.12;
-      letter-spacing: -0.01em;
-      margin: 0 0 1rem;
-      color: var(--m-ink);
-    }
-
-    .metodo__intro {
-      max-width: 560px;
-      margin: 0 auto 4rem;
-      font-size: 1.02rem;
-      line-height: 1.6;
-      color: var(--m-ink-dim);
-    }
-
-    .metodo .loom { position: relative; }
-
-    .metodo .stages {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      text-align: left;
-    }
-
-    .metodo .stage {
-      background: var(--m-card);
-      border: 1px solid var(--m-card-border);
-      border-radius: 20px;
-      padding: 2.1rem 1.9rem 2.2rem;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .metodo .stage:hover {
-      transform: translateY(-6px);
-      background: var(--m-card-hover);
-      box-shadow: 0 20px 40px -20px rgba(0,0,0,0.4);
-    }
-
-    .metodo .stage__top { display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1.3rem; }
-
-    .metodo .stage__icon {
-      width: 42px; height: 42px;
-      flex: none;
-      border-radius: 12px;
-      background: rgba(255,255,255,0.14);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .metodo .stage__icon svg { width: 20px; height: 20px; }
-
-    .metodo .stage__num {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      color: var(--m-star);
-      display: block;
-      margin-bottom: 0.15rem;
-    }
-
-    .metodo .stage__title {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 1.18rem;
-      line-height: 1.25;
-      margin: 0;
-      color: var(--m-ink);
-    }
-
-    .metodo .stage__desc {
-      font-size: 0.94rem;
-      line-height: 1.6;
-      color: var(--m-ink-dim);
-      margin: 0;
-    }
-
-    .metodo__cta-row { margin-top: 3.4rem; display: flex; flex-direction: column; align-items: center; gap: 0.9rem; }
-
-    .metodo__cta {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: #fff;
-      text-decoration: none;
-      background: linear-gradient(135deg, var(--m-orange), var(--m-orange-2));
-      padding: 1rem 2.1rem;
-      border-radius: 999px;
-      box-shadow: 0 12px 28px -10px rgba(242,113,42,0.55);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      display: inline-block;
-    }
-    .metodo__cta:hover { transform: translateY(-2px); box-shadow: 0 16px 32px -8px rgba(242,113,42,0.7); }
-    .metodo__cta:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-
-    .metodo__cta-note { font-size: 0.82rem; color: var(--m-ink-faint); }
-
-    @media (max-width: 880px) {
-      .metodo { padding: 5rem 1.25rem 4.5rem; }
-      .metodo .stages { grid-template-columns: 1fr; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .metodo__stars span { animation: none; opacity: 0.35; }
-      .metodo .stage, .metodo__cta { transition: none; }
-    }
-
-
-    /* ── AREE DI INTERVENTO ── */
-    .aree-section {
-      background: var(--white);
-      text-align: center;
-    }
-
-    .aree-section h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(30px, 4vw, 50px);
-      font-weight: 800;
-      color: var(--black);
-      margin-bottom: 12px;
-    }
-
-    .aree-section .subtitle {
-      font-size: 17px;
-      color: var(--gray);
-      max-width: 560px;
-      margin: 0 auto 64px;
-      line-height: 1.6;
-    }
-
-    .aree-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      text-align: left;
-    }
-
-    .area-card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 36px 32px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.06);
-      transition: background 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    .area-card:hover {
-      background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
-      box-shadow: 0 8px 32px rgba(124,58,237,0.3);
-    }
-
-    .area-card:hover .area-card-tag {
-      color: rgba(255,255,255,0.95);
-    }
-
-    .area-card:hover p {
-      color: rgba(255,255,255,0.75);
-    }
-
-    .area-card:hover .area-accent {
-      color: #F97316;
-    }
-
-    .area-accent {
-      width: 28px;
-      height: 28px;
-      color: #F97316;
-      margin-bottom: 20px;
-      transition: color 0.35s ease;
-    }
-
-    .area-card-tag {
-      font-size: 17px;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      color: #111111;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-      display: block;
-      line-height: 1.4;
-      transition: color 0.35s ease;
-    }
-
-    .area-card p {
-      font-size: 12px;
-      font-weight: 400;
-      color: #666666;
-      line-height: 1.65;
-      transition: color 0.35s ease;
-    }
-
-    /* ── BLOG ── */
-    .blog-section {
-      background: #f8f8f8;
-      padding: 100px 48px;
-    }
-
-    .blog-section-header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      margin-bottom: 48px;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .blog-section-header h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(28px, 4vw, 42px);
-      font-weight: 800;
-      color: var(--black);
-      line-height: 1.2;
-    }
-
-    .blog-section-header p {
-      font-size: 15px;
-      color: #666;
-      margin-top: 8px;
-    }
-
-    .blog-mostra-tutti {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--black);
-      text-decoration: none;
-      border: 1.5px solid rgba(0,0,0,0.15);
-      border-radius: 999px;
-      padding: 10px 20px;
-      white-space: nowrap;
-      transition: all 0.2s;
-    }
-
-    .blog-mostra-tutti:hover {
-      background: var(--black);
-      color: var(--white);
-      border-color: var(--black);
-    }
-
-    .blog-preview-grid {
-      display: grid;
-      grid-template-columns: 1.6fr 1fr;
-      gap: 20px;
-      max-width: 1140px;
-      margin: 0 auto;
-    }
-
-    .blog-card-main {
-      background: #ffffff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-
-    .blog-card-main:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(124,58,237,0.15);
-    }
-
-    .blog-card-main img {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      display: block;
-      background: linear-gradient(135deg, #2563EB, #7C3AED);
-    }
-
-    .blog-card-main-body {
-      padding: 28px;
-    }
-
-    .blog-card-small-col {
-      display: grid;
-      grid-template-rows: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .blog-card-small {
-      background: #ffffff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-
-    .blog-card-small:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(124,58,237,0.15);
-    }
-
-    .blog-card-small img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-      display: block;
-      background: linear-gradient(135deg, #2563EB, #7C3AED);
-    }
-
-    .blog-card-small-body { padding: 20px; }
-
-    .blog-card-cat {
-      display: inline-block;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--purple);
-      background: #f5f0ff;
-      border-radius: 999px;
-      padding: 4px 12px;
-      margin-bottom: 10px;
-    }
-
-    .blog-card-titolo-main {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--black);
-      line-height: 1.35;
-      margin-bottom: 10px;
-    }
-
-    .blog-card-titolo-small {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--black);
-      line-height: 1.4;
-      margin-bottom: 8px;
-    }
-
-    .blog-card-sommario {
-      font-size: 14px;
-      color: #666;
-      line-height: 1.6;
-      margin-bottom: 16px;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .blog-card-meta {
-      font-size: 12px;
-      color: rgba(0,0,0,0.4);
-    }
-
-    /* LEAD GEN ── */
-    .leadgen-section {
-      background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
-      text-align: center;
-      padding: 120px 48px;
-    }
-
-    .leadgen-section h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(32px, 5vw, 62px);
-      font-weight: 800;
-      color: var(--white);
-      max-width: 820px;
-      margin: 0 auto 20px;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-    }
-
-    .leadgen-section p {
-      font-size: 19px;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 48px;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: #ffffff;
-      padding: 72px 48px 40px;
-      border-top: 1px solid rgba(0,0,0,0.08);
-    }
-
-    .footer-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 64px;
-    }
-
-    .footer-brand {
-      font-size: 16px;
-      font-weight: 500;
-      color: var(--black);
-      margin-bottom: 12px;
-    }
-
-    .footer-brand-desc {
-      font-size: 13px;
-      color: rgba(0,0,0,0.5);
-      line-height: 1.6;
-    }
-
-    .footer-col-title {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(0,0,0,0.4);
-      margin-bottom: 20px;
-    }
-
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .footer-links a {
-      font-size: 14px;
-      color: rgba(0,0,0,0.7);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover { color: var(--black); }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.07);
-      padding-top: 28px;
-      font-size: 12px;
-      color: rgba(0,0,0,0.35);
-    }
-
-    /* ── RESPONSIVE ── */
-
-    /* Tablet landscape / small desktop (≤1024px) */
     @media (max-width: 1024px) {
-      nav { padding: 0 32px; }
-      section { padding: 88px 32px; }
-      .leadgen-section { padding: 100px 32px; }
-      footer { padding: 64px 32px 36px; }
-      .stats-grid { gap: 20px; }
-      .stat-number { font-size: 44px; }
-      .aree-grid { grid-template-columns: repeat(2, 1fr); }
+      nav { padding: 0 32px; } footer { padding: 64px 32px 36px; }
+      .policy-hero { padding: 64px 32px 56px; } .policy-content { padding: 56px 32px 80px; }
     }
-
-    /* Tablet portrait (≤900px) */
     @media (max-width: 900px) {
-      nav { padding: 0 24px; }
-      section { padding: 72px 24px; }
-      .leadgen-section { padding: 88px 24px; }
-      footer { padding: 56px 24px 32px; }
-
-      .nav-links { gap: 24px; }
-      .nav-links a { font-size: 13px; }
-
-      .hero { padding: 100px 24px 64px; }
-      .hero p { font-size: 16px; }
-
-      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; margin-bottom: 72px; }
-      .stat-number { font-size: 44px; }
-
-      .risk-title { font-size: clamp(22px, 4vw, 34px); }
-      .risk-grid { grid-template-columns: 1fr; gap: 32px; }
-
-      .servizi-grid { grid-template-columns: 1fr; gap: 16px; }
-      .servizi-card { height: 180px; }
-      .servizi-card.flipped .servizi-card-inner { transform: rotateY(180deg); }
-
-      .aree-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-      .area-card { padding: 28px 24px; }
-
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      nav { padding: 0 24px; } .nav-links { gap: 24px; }
+      footer { padding: 56px 24px 32px; } .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .policy-hero { padding: 56px 24px 48px; } .policy-content { padding: 48px 24px 72px; }
     }
-
-    /* Mobile large (≤600px) */
     @media (max-width: 600px) {
-      nav { padding: 0 20px; height: 56px; }
-      .nav-logo { font-size: 16px; }
-      .nav-links { display: none; }
-      .nav-hamburger { display: flex; }
-
-      section { padding: 56px 20px; }
-      .leadgen-section { padding: 72px 20px; }
-      footer { padding: 48px 20px 28px; }
-
-      .hero { padding: 88px 20px 56px; min-height: 100svh; }
-      .hero p { font-size: 15px; margin-bottom: 40px; }
-      .hero-cta { flex-direction: column; align-items: stretch; width: 100%; max-width: 320px; }
-      .btn { justify-content: center; padding: 15px 24px; font-size: 14px; }
-
-      .stats-title { font-size: 16px; margin-bottom: 40px; }
-      .stats-grid { grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 56px; }
-      .stat-number { font-size: 38px; }
-      .stat-label { font-size: 13px; }
-
-      .risk-grid { gap: 28px; }
-      .risk-item p { font-size: 14px; }
-
-      .servizi-section h2 { margin-bottom: 40px; }
-      .servizi-card { padding: 24px 20px; }
-      .servizi-card p { font-size: 15px; }
-
-      .aree-grid { grid-template-columns: 1fr; gap: 14px; }
-      .blog-section { padding: 56px 20px; }
-      .blog-preview-grid { grid-template-columns: 1fr; }
-      .blog-card-small-col { grid-template-rows: auto; grid-template-columns: 1fr 1fr; }
-      .blog-card-main img { height: 220px; }
-      .aree-section h2 { margin-bottom: 10px; }
-      .aree-section .subtitle { font-size: 14px; margin-bottom: 40px; }
-      .area-card { padding: 24px 20px; }
-      .area-card p { font-size: 14px; }
-
-      .leadgen-section h2 { font-size: clamp(26px, 8vw, 48px); }
-      .leadgen-section p { font-size: 14px; margin-bottom: 36px; }
-
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px; }
-      .footer-links a { font-size: 13px; }
+      nav { padding: 0 20px; height: 56px; } .nav-links { display: none; } .nav-hamburger { display: flex; }
+      .page { padding-top: 56px; } .policy-hero { padding: 48px 20px 40px; }
+      .policy-content { padding: 40px 20px 64px; } .policy-intro { padding: 20px; }
+      .policy-section h2 { font-size: 17px; } .policy-section p, .policy-section ul li { font-size: 14px; }
+      footer { padding: 48px 20px 28px; } .footer-grid { grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px; }
     }
-
-    /* Mobile small (≤400px) */
     @media (max-width: 400px) {
-      nav { padding: 0 16px; }
-      section { padding: 48px 16px; }
-      .leadgen-section { padding: 64px 16px; }
-      footer { padding: 40px 16px 24px; }
-      .nav-mobile-menu { padding: 20px 16px 28px; }
-
-      .hero { padding: 80px 16px 48px; }
-      .stats-grid { gap: 16px; }
-      .stat-number { font-size: 32px; }
+      nav { padding: 0 16px; } .policy-hero { padding: 40px 16px 32px; }
+      .policy-content { padding: 32px 16px 56px; } footer { padding: 40px 16px 24px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <nav>
-    <a href="#" class="nav-logo"><img src="data:image/png;base64,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" alt="Starloom" /></a>
+    <a href="/" class="nav-logo">
+      <img src="data:image/png;base64,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" alt="Starloom" />
+    </a>
     <ul class="nav-links">
-      <li><a href="#servizi">Servizi</a></li>
-      <li><a href="#aree">Aree di Intervento</a></li>
+      <li><a href="/#servizi">Servizi</a></li>
+      <li><a href="/#aree">Aree di Intervento</a></li>
       <li><a href="/blog">Blog</a></li>
       <li><a href="/contatti">Contatti</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Apri menu">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- MOBILE MENU -->
   <div class="nav-mobile-menu" id="mobileMenu">
-    <a href="#servizi" class="mobile-link">Servizi</a>
-    <a href="#aree" class="mobile-link">Aree di Intervento</a>
+    <a href="/#servizi" class="mobile-link">Servizi</a>
+    <a href="/#aree" class="mobile-link">Aree di Intervento</a>
     <a href="/blog" class="mobile-link">Blog</a>
     <a href="/contatti" class="mobile-link">Contatti</a>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Mobile tap-to-flip for servizi cards
-    document.querySelectorAll('.servizi-card').forEach(card => {
-      card.addEventListener('click', () => {
-        card.classList.toggle('flipped');
-      });
-    });
+  <div class="page">
 
-    // Carica articoli in evidenza nella sezione blog homepage
-    async function caricaBlogPreview() {
-      try {
-        const res = await fetch("articoli.json");
-        const articoli = await res.json();
-        const inEvidenza = articoli
-          .filter(a => a.inEvidenza)
-          .sort((a, b) => a.ordineEvidenza - b.ordineEvidenza)
-          .slice(0, 5);
-
-        if (inEvidenza.length === 0) return;
-
-        const principale = inEvidenza[0];
-        const secondari = inEvidenza.slice(1, 3);
-
-        const grid = document.getElementById("blogPreviewGrid");
-
-        const imgMain = principale.immagine
-          ? `<img src="${principale.immagine}" alt="${principale.titolo}" />`
-          : `<div style="width:100%;height:320px;background:linear-gradient(135deg,#2563EB,#7C3AED);"></div>`;
-
-        const cardsSecondarie = secondari.map(a => {
-          const img = a.immagine
-            ? `<img src="${a.immagine}" alt="${a.titolo}" />`
-            : `<div style="width:100%;height:140px;background:linear-gradient(135deg,#2563EB,#7C3AED);"></div>`;
-          return `
-            <a class="blog-card-small" href="articoli/${a.id}">
-              ${img}
-              <div class="blog-card-small-body">
-                <span class="blog-card-cat">${a.categoria}</span>
-                <h3 class="blog-card-titolo-small">${a.titolo}</h3>
-                <p class="blog-card-meta">${a.dataLeggibile} · ${a.minLettura} min</p>
-              </div>
-            </a>`;
-        }).join("");
-
-        grid.innerHTML = `
-          <a class="blog-card-main" href="articoli/${principale.id}">
-            ${imgMain}
-            <div class="blog-card-main-body">
-              <span class="blog-card-cat">${principale.categoria}</span>
-              <h3 class="blog-card-titolo-main">${principale.titolo}</h3>
-              <p class="blog-card-sommario">${principale.sommario}</p>
-              <p class="blog-card-meta">${principale.dataLeggibile} · ${principale.minLettura} min di lettura</p>
-            </div>
-          </a>
-          <div class="blog-card-small-col">${cardsSecondarie}</div>`;
-      } catch(e) {
-        console.log("Blog preview non disponibile:", e);
-      }
-    }
-
-    caricaBlogPreview();
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-    });
-
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-      });
-    });
-  </script>
-
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Trasformiamo le competenze digitali in vantaggio strategico.</h1>
-    <p>Starloom è l'Educational Partner per aziende, istituzioni e università che vogliono accelerare la propria maturità digitale attraverso programmi strutturati e orientati all'impatto.</p>
-    <div class="hero-cta">
-      <a href="/contatti" class="btn btn-white">Valuta il tuo Digital Skill Gap</a>
-      <a href="#servizi" class="btn btn-outline">Scopri i Servizi &rarr;</a>
-    </div>
-  </section>
-
-  <!-- INFO / STATS -->
-  <section class="stats-section">
-    <div class="section-inner">
-      <p class="stats-title">Un impatto concreto su organizzazioni complesse.</p>
-      <div class="stats-grid">
-        <div class="stat-item">
-          <div class="stat-number">+100</div>
-          <div class="stat-label">Professionisti senior coinvolti</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">+300</div>
-          <div class="stat-label">Professionisti e studenti formati</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">+20</div>
-          <div class="stat-label">Organizzazioni affiancate</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">+10</div>
-          <div class="stat-label">Ambiti di intervento strategico</div>
-        </div>
-      </div>
-
-      <hr class="divider" />
-
-      <p class="risk-title">Il divario tra innovazione e competenze è il vero rischio competitivo.</p>
-      <div class="risk-grid">
-        <div class="risk-item">
-          <svg class="risk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
-          </svg>
-          <p>La velocità dell'innovazione tecnologica supera la capacità delle organizzazioni di adattarsi.</p>
-        </div>
-        <div class="risk-item">
-          <svg class="risk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="4" cy="6" r="1.5"/><circle cx="4" cy="12" r="1.5"/><circle cx="4" cy="18" r="1.5"/>
-            <circle cx="12" cy="4" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="20" r="1.5"/>
-            <circle cx="20" cy="8" r="1.5"/><circle cx="20" cy="16" r="1.5"/>
-            <line x1="5.5" y1="6" x2="10.5" y2="4"/><line x1="5.5" y1="6" x2="10.5" y2="12"/><line x1="5.5" y1="12" x2="10.5" y2="4"/><line x1="5.5" y1="12" x2="10.5" y2="12"/><line x1="5.5" y1="12" x2="10.5" y2="20"/><line x1="5.5" y1="18" x2="10.5" y2="12"/><line x1="5.5" y1="18" x2="10.5" y2="20"/>
-            <line x1="13.5" y1="4" x2="18.5" y2="8"/><line x1="13.5" y1="4" x2="18.5" y2="16"/><line x1="13.5" y1="12" x2="18.5" y2="8"/><line x1="13.5" y1="12" x2="18.5" y2="16"/><line x1="13.5" y1="20" x2="18.5" y2="16"/>
-          </svg>
-          <p>Intelligenza artificiale, automazione e nuovi modelli digitali stanno ridefinendo processi, competenze e mercati.</p>
-        </div>
-        <div class="risk-item">
-          <svg class="risk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
-          <p>Senza un aggiornamento strutturato delle competenze, il rischio non è solo rallentare ma perdere quote di mercato.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVIZI -->
-  <section class="metodo" id="servizi">
-    <div class="metodo__stars" aria-hidden="true">
-      <span style="top:8%; left:12%; animation-delay:0s;"></span>
-      <span style="top:18%; left:82%; animation-delay:1.1s;"></span>
-      <span style="top:34%; left:6%; animation-delay:2.3s;"></span>
-      <span style="top:6%; left:48%; animation-delay:0.6s;"></span>
-      <span style="top:28%; left:64%; animation-delay:1.8s;"></span>
-      <span style="top:12%; left:92%; animation-delay:2.9s;"></span>
+    <div class="policy-hero">
+      <h1>Terms &amp; Conditions</h1>
+      <p class="meta">Ultimo aggiornamento: 24 / 08 / 2026</p>
     </div>
 
-    <div class="metodo__inner">
+    <div class="policy-content">
 
-      <p class="eyebrow">Cosa facciamo</p>
-      <h2 class="metodo__title">I nostri servizi</h2>
-      <p class="metodo__intro">
-        Tre ambiti di intervento, pensati per essere attivati insieme o singolarmente
-        in base a dove si trova oggi la tua organizzazione.
-      </p>
-
-      <div class="loom">
-        <div class="stages">
-          <article class="stage">
-            <div class="stage__top">
-              <span class="stage__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="10.5" cy="10.5" r="6.5"/>
-                  <line x1="15.5" y1="15.5" x2="21" y2="21"/>
-                </svg>
-              </span>
-              <div>
-                <h3 class="stage__title">Assessment &amp; Skills Gap Analysis</h3>
-              </div>
-            </div>
-            <p class="stage__desc">
-              Identifichiamo il reale skill gap dell'organizzazione e definiamo
-              le priorità strategiche basandoci su dati e obiettivi, non su percezioni.
-            </p>
-          </article>
-
-          <article class="stage">
-            <div class="stage__top">
-              <span class="stage__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 19V6a2 2 0 0 1 2-2h8l6 6v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/>
-                  <path d="M14 4v6h6"/>
-                  <path d="M9.2 17.4 L9 19.5 L11.1 19.3 L17.3 13.1 A1.3 1.3 0 0 0 15.4 11.2 Z"/>
-                </svg>
-              </span>
-              <div>
-                <h3 class="stage__title">Learning Design</h3>
-              </div>
-            </div>
-            <p class="stage__desc">
-              Progettiamo percorsi formativi coerenti con il contesto organizzativo
-              e con le esigenze specifiche emerse in fase di assessment.
-            </p>
-          </article>
-
-          <article class="stage">
-            <div class="stage__top">
-              <span class="stage__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="8" cy="8" r="3"/>
-                  <circle cx="17" cy="6" r="2.4"/>
-                  <circle cx="17" cy="14" r="2.4"/>
-                  <circle cx="8" cy="18" r="2.4"/>
-                  <line x1="10.2" y1="6.8" x2="14.9" y2="6.3"/>
-                  <line x1="10.2" y1="9.6" x2="14.9" y2="13"/>
-                  <line x1="8" y1="11" x2="8" y2="15.6"/>
-                </svg>
-              </span>
-              <div>
-                <h3 class="stage__title">Program Coordination</h3>
-              </div>
-            </div>
-            <p class="stage__desc">
-              Coordiniamo docenti, contenuti e implementazione, garantendo
-              qualità e continuità dall'avvio al monitoraggio dei risultati.
-            </p>
-          </article>
-        </div>
+      <div class="policy-intro">
+        <p>Il presente documento disciplina le condizioni di utilizzo del sito web <strong>www.starloom.it</strong>. L&rsquo;accesso e la navigazione nel Sito comportano l&rsquo;accettazione dei presenti Termini e Condizioni.</p>
+        <p>
+          <strong>Starloom Srl</strong><br>
+          Sede legale: Via Gabriele D&rsquo;Annunzio 35 &ndash; 95128 Catania (CT)<br>
+          P.IVA / CF: 06209440871<br>
+          PEC: <a href="mailto:starloom@pec.it">starloom@pec.it</a><br>
+          Email: <a href="mailto:amministrazione@starloom.it">amministrazione@starloom.it</a>
+        </p>
       </div>
 
-      <div class="metodo__cta-row">
-        <a class="metodo__cta" href="/contatti">Richiedi un confronto strategico →</a>
+      <div class="policy-section">
+        <h2><span class="num">1</span> Titolare del sito</h2>
+        <p>Il sito &egrave; gestito da <strong>Starloom Srl</strong>, con sede legale in Via Gabriele D&rsquo;Annunzio 35 &ndash; 95128 Catania (CT), P.IVA / CF: 06209440871.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">2</span> Natura del sito</h2>
+        <p>Il sito starloom.it ha finalit&agrave; esclusivamente informative e di presentazione delle attivit&agrave; svolte da Starloom Srl. Attraverso il sito &egrave; possibile:</p>
+        <ul>
+          <li>consultare informazioni sui servizi e progetti sviluppati dalla societ&agrave;</li>
+          <li>richiedere informazioni tramite moduli di contatto</li>
+          <li>prenotare eventuali incontri informativi tramite strumenti esterni</li>
+          <li>ricevere aggiornamenti sulle attivit&agrave; della societ&agrave;</li>
+        </ul>
+        <p>Il sito non costituisce piattaforma di e-commerce e non consente l&rsquo;acquisto diretto di servizi. Eventuali rapporti contrattuali con Starloom Srl saranno regolati da accordi specifici stipulati separatamente tra le parti.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">3</span> Utilizzo del sito</h2>
+        <p>Gli utenti si impegnano a utilizzare il sito nel rispetto della normativa vigente e dei presenti Termini e Condizioni. &Egrave; vietato:</p>
+        <ul>
+          <li>utilizzare il sito per finalit&agrave; illecite o fraudolente</li>
+          <li>tentare di compromettere la sicurezza o il funzionamento del sito</li>
+          <li>inviare contenuti offensivi, diffamatori o contrari alla legge tramite i moduli di contatto</li>
+          <li>utilizzare strumenti automatici per estrarre dati dal sito senza autorizzazione</li>
+        </ul>
+        <p>Starloom si riserva il diritto di limitare o impedire l&rsquo;accesso al sito in caso di utilizzo improprio.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">4</span> Propriet&agrave; intellettuale</h2>
+        <p>Tutti i contenuti presenti sul sito, inclusi a titolo esemplificativo:</p>
+        <ul>
+          <li>testi</li>
+          <li>loghi e marchi</li>
+          <li>elementi grafici</li>
+          <li>fotografie</li>
+          <li>layout e struttura del sito</li>
+        </ul>
+        <p>sono di propriet&agrave; di Starloom Srl o concessi in licenza dai rispettivi titolari e sono protetti dalle normative in materia di diritto d&rsquo;autore e propriet&agrave; intellettuale.</p>
+        <p>&Egrave; vietata la riproduzione, distribuzione, modifica o utilizzo dei contenuti del sito senza autorizzazione scritta del titolare.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">5</span> Limitazione di responsabilit&agrave;</h2>
+        <p>Le informazioni pubblicate sul sito sono fornite a scopo puramente informativo. Starloom Srl si impegna a mantenere aggiornati i contenuti del sito ma non garantisce l&rsquo;assenza di errori, inesattezze o omissioni.</p>
+        <p>In nessun caso Starloom potr&agrave; essere ritenuta responsabile per:</p>
+        <ul>
+          <li>eventuali danni derivanti dall&rsquo;utilizzo del sito</li>
+          <li>interruzioni o malfunzionamenti dei servizi online</li>
+          <li>contenuti di siti terzi eventualmente collegati tramite link</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">6</span> Link a siti di terze parti</h2>
+        <p>Il sito pu&ograve; contenere collegamenti a siti web di terze parti. Tali siti sono gestiti da soggetti indipendenti e Starloom non ha alcun controllo sui loro contenuti. La presenza di tali link non implica alcuna approvazione o responsabilit&agrave; da parte di Starloom.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">7</span> Trattamento dei dati personali</h2>
+        <p>Il trattamento dei dati personali degli utenti avviene nel rispetto della normativa vigente in materia di protezione dei dati personali. Per maggiori informazioni &egrave; possibile consultare:</p>
+        <ul>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/cookie-policy">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">8</span> Modifiche ai presenti Termini</h2>
+        <p>Starloom Srl si riserva il diritto di modificare o aggiornare i presenti Termini e Condizioni in qualsiasi momento. Le modifiche entreranno in vigore dalla data di pubblicazione sul sito.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">9</span> Legge applicabile</h2>
+        <p>I presenti Termini e Condizioni sono regolati dalla legge italiana.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">10</span> Foro competente</h2>
+        <p>Per qualsiasi controversia relativa all&rsquo;interpretazione o applicazione dei presenti Termini e Condizioni sar&agrave; competente in via esclusiva il <strong>Foro di Catania</strong>. &Egrave; fatta salva, ai sensi dell&rsquo;art. 33, comma 2, lett. u) del Codice del Consumo (D.Lgs. 206/2005), l&rsquo;applicazione del foro del luogo di residenza o domicilio del consumatore, qualora la controparte rivesta la qualifica di consumatore ai sensi di legge.</p>
       </div>
 
     </div>
-  </section>
+  </div>
 
-  <!-- LOGHI CLIENTI -->
-  <style>
-    .loghi-section {
-      background: #ffffff;
-      padding: 4rem 0;
-      overflow: hidden;
-    }
-    .loghi-section h2 {
-      text-align: center;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 1.6rem;
-      color: #111827;
-      margin: 0 0 2.5rem;
-    }
-    .loghi-track-wrap {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
-      mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
-    }
-    .loghi-track {
-      display: flex;
-      align-items: center;
-      width: max-content;
-      animation: loghi-scroll 28s linear infinite;
-    }
-    .loghi-track img {
-      height: 56px;
-      width: auto;
-      margin: 0 2.75rem;
-      object-fit: contain;
-    }
-    @keyframes loghi-scroll {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-  </style>
-  <section class="loghi-section" id="loghi">
-    <div class="section-inner">
-      <h2>Abbiamo lavorato con</h2>
-      <div class="loghi-track-wrap">
-        <div class="loghi-track">
-          <img src="img/loghi/digited.png" alt="Digit'Ed">
-          <img src="img/loghi/citta-metropolitana-bologna.png" alt="Città Metropolitana di Bologna">
-          <img src="img/loghi/comune-bologna.png" alt="Comune di Bologna">
-          <img src="img/loghi/formedil.png" alt="Formedil">
-          <img src="img/loghi/strategie-digitali.png" alt="Strategie Digitali - 360 Growth Factory">
-          <img src="img/loghi/bologna-innovation-square.png" alt="Bologna Innovation Square">
-          <img src="img/loghi/42skills.png" alt="42skills">
-          <!-- duplicated set for seamless infinite loop -->
-          <img src="img/loghi/digited.png" alt="" aria-hidden="true">
-          <img src="img/loghi/citta-metropolitana-bologna.png" alt="" aria-hidden="true">
-          <img src="img/loghi/comune-bologna.png" alt="" aria-hidden="true">
-          <img src="img/loghi/formedil.png" alt="" aria-hidden="true">
-          <img src="img/loghi/strategie-digitali.png" alt="" aria-hidden="true">
-          <img src="img/loghi/bologna-innovation-square.png" alt="" aria-hidden="true">
-          <img src="img/loghi/42skills.png" alt="" aria-hidden="true">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider" style="max-width:1140px;margin:0 auto;height:1px;background:#e5e5e5;"></div>
-
-  <!-- AREE DI INTERVENTO -->
-  <section class="aree-section" id="aree">
-    <div class="section-inner">
-      <h2>Aree di intervento strategico</h2>
-      <p class="subtitle">Ambiti in cui accompagniamo organizzazioni e istituzioni nello sviluppo delle competenze digitali.</p>
-      <div class="aree-grid">
-        <div class="area-card">
-          <svg class="area-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V12l3 2-3 2v2.5c1.2.7 2 2 2 3.5a4 4 0 0 1-8 0c0-1.5.8-2.8 2-3.5V16l-3-2 3-2V9.5C8.8 8.8 8 7.5 8 6a4 4 0 0 1 4-4z"/>
-            <circle cx="12" cy="6" r="1.2" fill="currentColor" stroke="none"/>
-            <circle cx="12" cy="18" r="1.2" fill="currentColor" stroke="none"/>
-          </svg>
-          <span class="area-card-tag">Artificial Intelligence &amp;<br>Automation</span>
-          <p>Sviluppo e integrazione di competenze legate all'intelligenza artificiale e all'automazione nei processi organizzativi e nei modelli operativi.</p>
-        </div>
-        <div class="area-card">
-          <svg class="area-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 12h2m16 0h2M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/>
-            <circle cx="12" cy="12" r="4"/>
-            <path d="M12 8v4l2.5 2.5"/>
-          </svg>
-          <span class="area-card-tag">Digital Strategy &amp; Branding</span>
-          <p>Definizione di strategie digitali e posizionamento competitivo in contesti in evoluzione.</p>
-        </div>
-        <div class="area-card">
-          <svg class="area-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
-            <polyline points="17 6 23 6 23 12"/>
-          </svg>
-          <span class="area-card-tag">Growth, Performance &amp;<br>E-Commerce</span>
-          <p>Progettazione di modelli di crescita digitale misurabili e orientati ai risultati.</p>
-        </div>
-        <div class="area-card">
-          <svg class="area-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            <line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="13" y2="14"/>
-          </svg>
-          <span class="area-card-tag">Content, Social Media &amp;<br>Influencer Marketing</span>
-          <p>Strutturazione di ecosistemi digitali e strategie di comunicazione coerenti con gli obiettivi strategici.</p>
-        </div>
-        <div class="area-card">
-          <svg class="area-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <ellipse cx="12" cy="5" rx="9" ry="3"/>
-            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
-            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-          </svg>
-          <span class="area-card-tag">Data Strategy &amp; Analytics</span>
-          <p>Sviluppo di competenze per l'analisi, l'interpretazione e l'utilizzo strategico dei dati.</p>
-        </div>
-        <div class="area-card">
-          <svg class="area-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="8" r="4"/>
-            <path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
-            <path d="M18 8h2m-1-1v2"/>
-          </svg>
-          <span class="area-card-tag">Cultura e Leadership Digitale</span>
-          <p>Sviluppo di mindset e competenze manageriali per guidare il cambiamento in contesti complessi.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOG -->
-  <section class="blog-section" id="blog">
-    <div class="section-inner">
-      <div class="blog-section-header">
-        <div>
-          <h2>Insights &amp; Risorse</h2>
-          <p>Approfondimenti sulla trasformazione digitale e la formazione aziendale.</p>
-        </div>
-        <a href="/blog" class="blog-mostra-tutti">≡ Mostra tutti</a>
-      </div>
-      <div class="blog-preview-grid" id="blogPreviewGrid">
-        <!-- Articoli caricati da JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- LEAD GEN -->
-  <section class="leadgen-section" id="contatti">
-    <div class="section-inner">
-      <h2>Un partner strutturato per governare la trasformazione digitale.</h2>
-      <p>Integriamo competenze, strategia e implementazione per generare impatto reale in contesti complessi.</p>
-      <a href="/contatti" class="btn btn-white">Richiedi un confronto strategico</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div class="footer-grid">
@@ -1318,8 +252,8 @@
         <div>
           <p class="footer-col-title">Navigazione</p>
           <ul class="footer-links">
-            <li><a href="#servizi">Servizi</a></li>
-            <li><a href="#aree">Aree di intervento</a></li>
+            <li><a href="/#servizi">Servizi</a></li>
+            <li><a href="/#aree">Aree di intervento</a></li>
             <li><a href="/contatti">Contatti</a></li>
           </ul>
         </div>
@@ -1328,7 +262,7 @@
           <ul class="footer-links">
             <li><a href="/privacy-policy">Privacy Policy</a></li>
             <li><a href="/cookie-policy">Cookie Policy</a></li>
-            <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+            <li><a href="/terms-conditions" class="active">Terms &amp; Conditions</a></li>
             <li><a href="/privacy-docenti">Informativa Privacy Docenti</a></li>
           </ul>
         </div>
@@ -1340,8 +274,6 @@
           </ul>
         </div>
       </div>
-      <div class="footer-bottom" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-        &copy; 2026 Starloom – Tutti i diritti riservati.<span>Starloom Srl &nbsp;&ndash;&nbsp; P.IVA: 06209440871</span>
-      </div>
+      <div class="footer-bottom" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">&copy; 2026 Starloom &ndash; Tutti i diritti riservati.<span>Starloom Srl &nbsp;&ndash;&nbsp; P.IVA: 06209440871</span></div>
     </div>
-  </footer>
+  <
